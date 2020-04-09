@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>contracts/shasta/SynthetixEscrow.js - Documentation</title>
+    <title>ArbRewarder - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,288 +31,4044 @@
 
 <div id="main">
     
-    <h1 class="page-title">contracts/shasta/SynthetixEscrow.js</h1>
+    <h1 class="page-title">ArbRewarder</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import ContractSettings from '../../contractSettings';
-import tronContract from '../../tronContract';
-import abi from '../../../lib/abis/shasta/SynthetixEscrow';
+        <h2>
+        ArbRewarder
+        </h2>
+        
+    
+</header>
 
-/** @constructor
- * @param contractSettings {ContractSettings}
- */
-function SynthetixEscrow(contractSettings) {
-  this.contractSettings = contractSettings || new ContractSettings();
+<article>
+    
+        <div class="container-overview">
+        
+            
 
-  const address = this.contractSettings.addressList['SynthetixEscrow'];
-  const tronWeb = this.contractSettings.tronWeb;
-  this.signer = this.contractSettings.signer;
-  this.contract = tronContract(abi, address, tronWeb, this.signer);
+    
 
-  /**
-   * Destroy the vesting information associated with an account.&lt;br>
-   * Transaction (consumes gas, requires signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.purgeAccount = async (account, txParams) => {
-    txParams = txParams || {};
-    const txHash = await this.contract.purgeAccount(account).send(txParams);
-    return { hash: txHash };
-  };
+    <h4 class="name" id="ArbRewarder"><span class="type-signature"></span>new ArbRewarder<span class="signature">(contractSettings)</span><span class="type-signature"></span></h4>
 
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _owner {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.nominateNewOwner = async (_owner, txParams) => {
-    txParams = txParams || {};
-    const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
-    return { hash: txHash };
-  };
+    
 
-  /**
-   * Obtain the index of the next schedule entry that will vest for a given user.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @returns BigNumber
-   **/
-  this.getNextVestingIndex = async account => {
-    return await this.contract.getNextVestingIndex(account).call({ _isConstant: true });
-  };
 
-  /**
-   * A call to this should be accompanied by either enough balance already available in this contract, or a corresponding call to synthetix.endow(), to ensure that when the funds are withdrawn, there is enough balance, as well as correctly calculating the fees. This may only be called by the owner during the contract's setup period. Note; although this function could technically be used to produce unbounded arrays, it's only in the foundation's command to add to these lists., Add a new vesting entry at a given time and quantity to an account's schedule.&lt;br>
-   * Transaction (consumes gas, requires signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param time {BigNumber}
-   * @param quantity {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.appendVestingEntry = async (account, time, quantity, txParams) => {
-    txParams = txParams || {};
-    const txHash = await this.contract.appendVestingEntry(account, time, quantity).send(txParams);
-    return { hash: txHash };
-  };
 
-  /**
-   * The number of vesting dates in an account's schedule.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @returns BigNumber
-   **/
-  this.numVestingEntries = async account => {
-    return await this.contract.numVestingEntries(account).call({ _isConstant: true });
-  };
 
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param  {String&lt;TrxAddress>}
-   * @returns BigNumber
-   **/
-  this.totalVestedAccountBalance = async address_1 => {
-    return await this.contract.totalVestedAccountBalance(address_1).call({ _isConstant: true });
-  };
+<dl class="details">
 
-  /**
-   * Obtain the next schedule entry that will vest for a given user.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @returns uint256[2]
-   **/
-  this.getNextVestingEntry = async account => {
-    return await this.contract.getNextVestingEntry(account).call({ _isConstant: true });
-  };
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line8">line 8</a>
+    </li></ul></dd>
+    
 
-  /**
-   * Allow a user to withdraw any SNX in their schedule that have vested.&lt;br>
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-  this.vest = async txParams => {
-    txParams = txParams || {};
-    const txHash = await this.contract.vest().send(txParams);
-    return { hash: txHash };
-  };
+    
 
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @param  {String&lt;TrxAddress>}
-   * @param  {BigNumber}
-   * @param  {BigNumber}
-   * @returns BigNumber
-   **/
-  this.vestingSchedules = async (address_1, uint256_1, uint256_2) => {
-    return await this.contract
-      .vestingSchedules(address_1, uint256_1, uint256_2)
-      .call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.nominatedOwner = async () => {
-    return await this.contract.nominatedOwner().call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Obtain the time at which the next schedule entry will vest for a given user.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @returns BigNumber
-   **/
-  this.getNextVestingTime = async account => {
-    return await this.contract.getNextVestingTime(account).call({ _isConstant: true });
-  };
+    
 
-  /**
-   * A simple alias to totalVestedAccountBalance: provides ERC20 balance integration.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @returns BigNumber
-   **/
-  this.balanceOf = async account => {
-    return await this.contract.balanceOf(account).call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.synthetix = async () => {
-    return await this.contract.synthetix().call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-  this.acceptOwnership = async txParams => {
-    txParams = txParams || {};
-    const txHash = await this.contract.acceptOwnership().send(txParams);
-    return { hash: txHash };
-  };
+    
 
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.owner = async () => {
-    return await this.contract.owner().call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Obtain the quantity which the next schedule entry will vest for a given user.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @returns BigNumber
-   **/
-  this.getNextVestingQuantity = async account => {
-    return await this.contract.getNextVestingQuantity(account).call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Get the time at which a given schedule entry will vest.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param index {BigNumber}
-   * @returns BigNumber
-   **/
-  this.getVestingTime = async (account, index) => {
-    return await this.contract.getVestingTime(account, index).call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-  this.totalVestedBalance = async () => {
-    return await this.contract.totalVestedBalance().call({ _isConstant: true });
-  };
+    
 
-  /**
-   * Assumes that the quantities are nonzero and that the sequence of timestamps is strictly increasing. This may only be called by the owner during the contract's setup period., Construct a vesting schedule to release a quantities of SNX over a series of intervals.&lt;br>
-   * Transaction (consumes gas, requires signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param times {uint256[]}
-   * @param quantities {uint256[]}
-   * @param txParams {TxParams}
-  
-   **/
-  this.addVestingSchedule = async (account, times, quantities, txParams) => {
-    txParams = txParams || {};
-    const txHash = await this.contract
-      .addVestingSchedule(account, times, quantities)
-      .send(txParams);
-    return { hash: txHash };
-  };
+    
 
-  /**
-   * Get a particular schedule entry for an account.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param index {BigNumber}
-   * @returns uint256[2]
-   **/
-  this.getVestingScheduleEntry = async (account, index) => {
-    return await this.contract.getVestingScheduleEntry(account, index).call({ _isConstant: true });
-  };
+    
 
-  /**
-   * This may only be called by the owner during the contract's setup period., Withdraws a quantity of SNX back to the synthetix contract.&lt;br>
-   * Transaction (consumes gas, requires signer)
-   * @param quantity {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.withdrawSynthetix = async (quantity, txParams) => {
-    txParams = txParams || {};
-    const txHash = await this.contract.withdrawSynthetix(quantity).send(txParams);
-    return { hash: txHash };
-  };
+    
 
-  /**
-   * Get the quantity of SNX associated with a given schedule entry.&lt;br>
-   * Call (no gas consumed, doesn't require signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param index {BigNumber}
-   * @returns BigNumber
-   **/
-  this.getVestingQuantity = async (account, index) => {
-    return await this.contract.getVestingQuantity(account, index).call({ _isConstant: true });
-  };
+    
+</dl>
 
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _synthetix {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setSynthetix = async (_synthetix, txParams) => {
-    txParams = txParams || {};
-    const txHash = await this.contract.setSynthetix(_synthetix).send(txParams);
-    return { hash: txHash };
-  };
-}
 
-export default SynthetixEscrow;
-</code></pre>
-        </article>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>contractSettings</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ContractSettings</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="acceptOwnership"><span class="type-signature"></span>acceptOwnership<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line195">line 195</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="arbSynthRate"><span class="type-signature"></span>arbSynthRate<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line255">line 255</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+<br>Payable (to enter TRX amount set txParams.value)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="exchangeRates"><span class="type-signature"></span>exchangeRates<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line114">line 114</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="initiateSelfDestruct"><span class="type-signature"></span>initiateSelfDestruct<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line286">line 286</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="initiationTime"><span class="type-signature"></span>initiationTime<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line72">line 72</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="isArbable"><span class="type-signature"></span>isArbable<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line93">line 93</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    boolean
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="lastPauseTime"><span class="type-signature"></span>lastPauseTime<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line226">line 226</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="nominatedOwner"><span class="type-signature"></span>nominatedOwner<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line122">line 122</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="nominateNewOwner"><span class="type-signature"></span>nominateNewOwner<span class="signature">(_owner, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line50">line 50</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_owner</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="owner"><span class="type-signature"></span>owner<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line218">line 218</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="paused"><span class="type-signature"></span>paused<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line158">line 158</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    boolean
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="recoverERC20"><span class="type-signature"></span>recoverERC20<span class="signature">(erc20_addr, to_addr, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line208">line 208</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>erc20_addr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>to_addr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="recoverETH"><span class="type-signature"></span>recoverETH<span class="signature">(to_addr, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line38">line 38</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>to_addr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="selfDestruct"><span class="type-signature"></span>selfDestruct<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line235">line 235</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="SELFDESTRUCT_DELAY"><span class="type-signature"></span>SELFDESTRUCT_DELAY<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line245">line 245</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="selfDestructBeneficiary"><span class="type-signature"></span>selfDestructBeneficiary<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line304">line 304</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="selfDestructInitiated"><span class="type-signature"></span>selfDestructInitiated<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line265">line 265</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    boolean
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setExchangeRates"><span class="type-signature"></span>setExchangeRates<span class="signature">(_exchangeRatesAddress, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line132">line 132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_exchangeRatesAddress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setParams"><span class="type-signature"></span>setParams<span class="signature">(_acceptable_slippage, _max_delay, _off_peg_min, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line146">line 146</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_acceptable_slippage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_max_delay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_off_peg_min</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setPaused"><span class="type-signature"></span>setPaused<span class="signature">(_paused, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line62">line 62</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_paused</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setSelfDestructBeneficiary"><span class="type-signature"></span>setSelfDestructBeneficiary<span class="signature">(_beneficiary, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line82">line 82</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_beneficiary</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setSynthAddress"><span class="type-signature"></span>setSynthAddress<span class="signature">(_synthAddress, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line184">line 184</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_synthAddress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setSynthetix"><span class="type-signature"></span>setSynthetix<span class="signature">(_address, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line314">line 314</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setUniswapExchange"><span class="type-signature"></span>setUniswapExchange<span class="signature">(_uniswapAddress, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line275">line 275</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_uniswapAddress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="synth"><span class="type-signature"></span>synth<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line28">line 28</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="synthetix"><span class="type-signature"></span>synthetix<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line174">line 174</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="synthetixProxy"><span class="type-signature"></span>synthetixProxy<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line296">line 296</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="terminateSelfDestruct"><span class="type-signature"></span>terminateSelfDestruct<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line104">line 104</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="uniswapAddress"><span class="type-signature"></span>uniswapAddress<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="uniswapExchange"><span class="type-signature"></span>uniswapExchange<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ArbRewarder.js.html">contracts/shasta/ArbRewarder.js</a>, <a href="contracts_shasta_ArbRewarder.js.html#line166">line 166</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

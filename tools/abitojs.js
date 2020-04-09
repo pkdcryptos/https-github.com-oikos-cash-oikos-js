@@ -45,6 +45,7 @@ const contracts = {
   SynthetixState: true,
   RewardEscrow: true,
   DappMaintenance: true,
+  ArbRewarder: true,
   // the synths will be added on for each network
 };
 

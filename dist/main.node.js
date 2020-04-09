@@ -44567,7 +44567,408 @@ var SHASTA_ADDRESSES = {
   name: 'OwnerChanged',
   type: 'event'
 }]);
+// CONCATENATED MODULE: ./lib/abis/shasta/ArbRewarder.js
+/* harmony default export */ var ArbRewarder = ([{
+  constant: true,
+  inputs: [],
+  name: 'uniswapAddress',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'synth',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'to_addr',
+    type: 'address'
+  }],
+  name: 'recoverETH',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_owner',
+    type: 'address'
+  }],
+  name: 'nominateNewOwner',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_paused',
+    type: 'bool'
+  }],
+  name: 'setPaused',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'initiationTime',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_beneficiary',
+    type: 'address'
+  }],
+  name: 'setSelfDestructBeneficiary',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'isArbable',
+  outputs: [{
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'terminateSelfDestruct',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'exchangeRates',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'nominatedOwner',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_exchangeRatesAddress',
+    type: 'address'
+  }],
+  name: 'setExchangeRates',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_acceptable_slippage',
+    type: 'uint256'
+  }, {
+    name: '_max_delay',
+    type: 'uint256'
+  }, {
+    name: '_off_peg_min',
+    type: 'uint256'
+  }],
+  name: 'setParams',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'paused',
+  outputs: [{
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'uniswapExchange',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'synthetix',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_synthAddress',
+    type: 'address'
+  }],
+  name: 'setSynthAddress',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'acceptOwnership',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'erc20_addr',
+    type: 'address'
+  }, {
+    name: 'to_addr',
+    type: 'address'
+  }],
+  name: 'recoverERC20',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'owner',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'lastPauseTime',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'selfDestruct',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'SELFDESTRUCT_DELAY',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'arbSynthRate',
+  outputs: [{
+    name: 'reward_tokens',
+    type: 'uint256'
+  }],
+  payable: true,
+  stateMutability: 'payable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'selfDestructInitiated',
+  outputs: [{
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_uniswapAddress',
+    type: 'address'
+  }],
+  name: 'setUniswapExchange',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'initiateSelfDestruct',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'synthetixProxy',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'selfDestructBeneficiary',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_address',
+    type: 'address'
+  }],
+  name: 'setSynthetix',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  inputs: [{
+    name: '_owner',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'constructor'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'isPaused',
+    type: 'bool'
+  }],
+  name: 'PauseChanged',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [],
+  name: 'SelfDestructTerminated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'beneficiary',
+    type: 'address'
+  }],
+  name: 'SelfDestructed',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'selfDestructDelay',
+    type: 'uint256'
+  }],
+  name: 'SelfDestructInitiated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newBeneficiary',
+    type: 'address'
+  }],
+  name: 'SelfDestructBeneficiaryUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerNominated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'oldOwner',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerChanged',
+  type: 'event'
+}]);
 // CONCATENATED MODULE: ./lib/abis/shasta/index.js
+
 
 
 
@@ -44588,7 +44989,8 @@ var SHASTA_ADDRESSES = {
   SynthetixEscrow: SynthetixEscrow,
   SynthetixState: SynthetixState,
   RewardEscrow: RewardEscrow,
-  DappMaintenance: DappMaintenance
+  DappMaintenance: DappMaintenance,
+  ArbRewarder: ArbRewarder
 });
 // CONCATENATED MODULE: ./lib/abis/index.js
 
@@ -57873,6 +58275,1086 @@ function DappMaintenance_DappMaintenance(contractSettings) {
 }
 
 /* harmony default export */ var shasta_DappMaintenance = (DappMaintenance_DappMaintenance);
+// CONCATENATED MODULE: ./src/contracts/shasta/ArbRewarder.js
+
+
+
+
+
+/** @constructor
+ * @param contractSettings {ContractSettings}
+ */
+
+function ArbRewarder_ArbRewarder(contractSettings) {
+  var _this = this;
+
+  this.contractSettings = contractSettings || new src_contractSettings();
+  var address = this.contractSettings.addressList['ArbRewarder'];
+  var tronWeb = this.contractSettings.tronWeb;
+  this.signer = this.contractSettings.signer;
+  this.contract = tronContract(ArbRewarder, address, tronWeb, this.signer);
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.uniswapAddress =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee() {
+    return regenerator_default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return _this.contract.uniswapAddress().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context.abrupt("return", _context.sent);
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.synth =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee2() {
+    return regenerator_default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return _this.contract.synth().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context2.abrupt("return", _context2.sent);
+
+          case 3:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param to_addr {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.recoverETH =
+  /*#__PURE__*/
+  function () {
+    var _ref3 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee3(to_addr, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              txParams = txParams || {};
+              _context3.next = 3;
+              return _this.contract.recoverETH(to_addr).send(txParams);
+
+            case 3:
+              txHash = _context3.sent;
+              return _context3.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function (_x, _x2) {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _owner {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.nominateNewOwner =
+  /*#__PURE__*/
+  function () {
+    var _ref4 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee4(_owner, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              txParams = txParams || {};
+              _context4.next = 3;
+              return _this.contract.nominateNewOwner(_owner).send(txParams);
+
+            case 3:
+              txHash = _context4.sent;
+              return _context4.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    }));
+
+    return function (_x3, _x4) {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _paused {boolean}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.setPaused =
+  /*#__PURE__*/
+  function () {
+    var _ref5 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee5(_paused, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee5$(_context5) {
+        while (1) {
+          switch (_context5.prev = _context5.next) {
+            case 0:
+              txParams = txParams || {};
+              _context5.next = 3;
+              return _this.contract.setPaused(_paused).send(txParams);
+
+            case 3:
+              txHash = _context5.sent;
+              return _context5.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context5.stop();
+          }
+        }
+      }, _callee5);
+    }));
+
+    return function (_x5, _x6) {
+      return _ref5.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+
+  this.initiationTime =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee6() {
+    return regenerator_default.a.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            _context6.next = 2;
+            return _this.contract.initiationTime().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context6.abrupt("return", _context6.sent);
+
+          case 3:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _beneficiary {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setSelfDestructBeneficiary =
+  /*#__PURE__*/
+  function () {
+    var _ref7 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee7(_beneficiary, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee7$(_context7) {
+        while (1) {
+          switch (_context7.prev = _context7.next) {
+            case 0:
+              txParams = txParams || {};
+              _context7.next = 3;
+              return _this.contract.setSelfDestructBeneficiary(_beneficiary).send(txParams);
+
+            case 3:
+              txHash = _context7.sent;
+              return _context7.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context7.stop();
+          }
+        }
+      }, _callee7);
+    }));
+
+    return function (_x7, _x8) {
+      return _ref7.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+   * @returns boolean
+   **/
+
+
+  this.isArbable =
+  /*#__PURE__*/
+  function () {
+    var _ref8 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee8(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee8$(_context8) {
+        while (1) {
+          switch (_context8.prev = _context8.next) {
+            case 0:
+              txParams = txParams || {};
+              _context8.next = 3;
+              return _this.contract.isArbable().send(txParams);
+
+            case 3:
+              txHash = _context8.sent;
+              return _context8.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context8.stop();
+          }
+        }
+      }, _callee8);
+    }));
+
+    return function (_x9) {
+      return _ref8.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.terminateSelfDestruct =
+  /*#__PURE__*/
+  function () {
+    var _ref9 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee9(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee9$(_context9) {
+        while (1) {
+          switch (_context9.prev = _context9.next) {
+            case 0:
+              txParams = txParams || {};
+              _context9.next = 3;
+              return _this.contract.terminateSelfDestruct().send(txParams);
+
+            case 3:
+              txHash = _context9.sent;
+              return _context9.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context9.stop();
+          }
+        }
+      }, _callee9);
+    }));
+
+    return function (_x10) {
+      return _ref9.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.exchangeRates =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee10() {
+    return regenerator_default.a.wrap(function _callee10$(_context10) {
+      while (1) {
+        switch (_context10.prev = _context10.next) {
+          case 0:
+            _context10.next = 2;
+            return _this.contract.exchangeRates().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context10.abrupt("return", _context10.sent);
+
+          case 3:
+          case "end":
+            return _context10.stop();
+        }
+      }
+    }, _callee10);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.nominatedOwner =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee11() {
+    return regenerator_default.a.wrap(function _callee11$(_context11) {
+      while (1) {
+        switch (_context11.prev = _context11.next) {
+          case 0:
+            _context11.next = 2;
+            return _this.contract.nominatedOwner().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context11.abrupt("return", _context11.sent);
+
+          case 3:
+          case "end":
+            return _context11.stop();
+        }
+      }
+    }, _callee11);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _exchangeRatesAddress {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setExchangeRates =
+  /*#__PURE__*/
+  function () {
+    var _ref12 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee12(_exchangeRatesAddress, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee12$(_context12) {
+        while (1) {
+          switch (_context12.prev = _context12.next) {
+            case 0:
+              txParams = txParams || {};
+              _context12.next = 3;
+              return _this.contract.setExchangeRates(_exchangeRatesAddress).send(txParams);
+
+            case 3:
+              txHash = _context12.sent;
+              return _context12.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context12.stop();
+          }
+        }
+      }, _callee12);
+    }));
+
+    return function (_x11, _x12) {
+      return _ref12.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _acceptable_slippage {BigNumber}
+   * @param _max_delay {BigNumber}
+   * @param _off_peg_min {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.setParams =
+  /*#__PURE__*/
+  function () {
+    var _ref13 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee13(_acceptable_slippage, _max_delay, _off_peg_min, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee13$(_context13) {
+        while (1) {
+          switch (_context13.prev = _context13.next) {
+            case 0:
+              txParams = txParams || {};
+              _context13.next = 3;
+              return _this.contract.setParams(_acceptable_slippage, _max_delay, _off_peg_min).send(txParams);
+
+            case 3:
+              txHash = _context13.sent;
+              return _context13.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context13.stop();
+          }
+        }
+      }, _callee13);
+    }));
+
+    return function (_x13, _x14, _x15, _x16) {
+      return _ref13.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns boolean
+   **/
+
+
+  this.paused =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee14() {
+    return regenerator_default.a.wrap(function _callee14$(_context14) {
+      while (1) {
+        switch (_context14.prev = _context14.next) {
+          case 0:
+            _context14.next = 2;
+            return _this.contract.paused().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context14.abrupt("return", _context14.sent);
+
+          case 3:
+          case "end":
+            return _context14.stop();
+        }
+      }
+    }, _callee14);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.uniswapExchange =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee15() {
+    return regenerator_default.a.wrap(function _callee15$(_context15) {
+      while (1) {
+        switch (_context15.prev = _context15.next) {
+          case 0:
+            _context15.next = 2;
+            return _this.contract.uniswapExchange().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context15.abrupt("return", _context15.sent);
+
+          case 3:
+          case "end":
+            return _context15.stop();
+        }
+      }
+    }, _callee15);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.synthetix =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee16() {
+    return regenerator_default.a.wrap(function _callee16$(_context16) {
+      while (1) {
+        switch (_context16.prev = _context16.next) {
+          case 0:
+            _context16.next = 2;
+            return _this.contract.synthetix().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context16.abrupt("return", _context16.sent);
+
+          case 3:
+          case "end":
+            return _context16.stop();
+        }
+      }
+    }, _callee16);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _synthAddress {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setSynthAddress =
+  /*#__PURE__*/
+  function () {
+    var _ref17 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee17(_synthAddress, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee17$(_context17) {
+        while (1) {
+          switch (_context17.prev = _context17.next) {
+            case 0:
+              txParams = txParams || {};
+              _context17.next = 3;
+              return _this.contract.setSynthAddress(_synthAddress).send(txParams);
+
+            case 3:
+              txHash = _context17.sent;
+              return _context17.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context17.stop();
+          }
+        }
+      }, _callee17);
+    }));
+
+    return function (_x17, _x18) {
+      return _ref17.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.acceptOwnership =
+  /*#__PURE__*/
+  function () {
+    var _ref18 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee18(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee18$(_context18) {
+        while (1) {
+          switch (_context18.prev = _context18.next) {
+            case 0:
+              txParams = txParams || {};
+              _context18.next = 3;
+              return _this.contract.acceptOwnership().send(txParams);
+
+            case 3:
+              txHash = _context18.sent;
+              return _context18.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context18.stop();
+          }
+        }
+      }, _callee18);
+    }));
+
+    return function (_x19) {
+      return _ref18.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param erc20_addr {String<TrxAddress>}
+   * @param to_addr {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.recoverERC20 =
+  /*#__PURE__*/
+  function () {
+    var _ref19 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee19(erc20_addr, to_addr, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee19$(_context19) {
+        while (1) {
+          switch (_context19.prev = _context19.next) {
+            case 0:
+              txParams = txParams || {};
+              _context19.next = 3;
+              return _this.contract.recoverERC20(erc20_addr, to_addr).send(txParams);
+
+            case 3:
+              txHash = _context19.sent;
+              return _context19.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context19.stop();
+          }
+        }
+      }, _callee19);
+    }));
+
+    return function (_x20, _x21, _x22) {
+      return _ref19.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.owner =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee20() {
+    return regenerator_default.a.wrap(function _callee20$(_context20) {
+      while (1) {
+        switch (_context20.prev = _context20.next) {
+          case 0:
+            _context20.next = 2;
+            return _this.contract.owner().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context20.abrupt("return", _context20.sent);
+
+          case 3:
+          case "end":
+            return _context20.stop();
+        }
+      }
+    }, _callee20);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.lastPauseTime =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee21() {
+    return regenerator_default.a.wrap(function _callee21$(_context21) {
+      while (1) {
+        switch (_context21.prev = _context21.next) {
+          case 0:
+            _context21.next = 2;
+            return _this.contract.lastPauseTime().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context21.abrupt("return", _context21.sent);
+
+          case 3:
+          case "end":
+            return _context21.stop();
+        }
+      }
+    }, _callee21);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.selfDestruct =
+  /*#__PURE__*/
+  function () {
+    var _ref22 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee22(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee22$(_context22) {
+        while (1) {
+          switch (_context22.prev = _context22.next) {
+            case 0:
+              txParams = txParams || {};
+              _context22.next = 3;
+              return _this.contract.selfDestruct().send(txParams);
+
+            case 3:
+              txHash = _context22.sent;
+              return _context22.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context22.stop();
+          }
+        }
+      }, _callee22);
+    }));
+
+    return function (_x23) {
+      return _ref22.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+
+  this.SELFDESTRUCT_DELAY =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee23() {
+    return regenerator_default.a.wrap(function _callee23$(_context23) {
+      while (1) {
+        switch (_context23.prev = _context23.next) {
+          case 0:
+            _context23.next = 2;
+            return _this.contract.SELFDESTRUCT_DELAY().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context23.abrupt("return", _context23.sent);
+
+          case 3:
+          case "end":
+            return _context23.stop();
+        }
+      }
+    }, _callee23);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+  <br>Payable (to enter TRX amount set txParams.value)
+   * @param txParams {TxParams}
+   * @returns BigNumber
+   **/
+
+  this.arbSynthRate =
+  /*#__PURE__*/
+  function () {
+    var _ref24 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee24(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee24$(_context24) {
+        while (1) {
+          switch (_context24.prev = _context24.next) {
+            case 0:
+              txParams = txParams || {};
+              _context24.next = 3;
+              return _this.contract.arbSynthRate().send(txParams);
+
+            case 3:
+              txHash = _context24.sent;
+              return _context24.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context24.stop();
+          }
+        }
+      }, _callee24);
+    }));
+
+    return function (_x24) {
+      return _ref24.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns boolean
+   **/
+
+
+  this.selfDestructInitiated =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee25() {
+    return regenerator_default.a.wrap(function _callee25$(_context25) {
+      while (1) {
+        switch (_context25.prev = _context25.next) {
+          case 0:
+            _context25.next = 2;
+            return _this.contract.selfDestructInitiated().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context25.abrupt("return", _context25.sent);
+
+          case 3:
+          case "end":
+            return _context25.stop();
+        }
+      }
+    }, _callee25);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _uniswapAddress {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setUniswapExchange =
+  /*#__PURE__*/
+  function () {
+    var _ref26 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee26(_uniswapAddress, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee26$(_context26) {
+        while (1) {
+          switch (_context26.prev = _context26.next) {
+            case 0:
+              txParams = txParams || {};
+              _context26.next = 3;
+              return _this.contract.setUniswapExchange(_uniswapAddress).send(txParams);
+
+            case 3:
+              txHash = _context26.sent;
+              return _context26.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context26.stop();
+          }
+        }
+      }, _callee26);
+    }));
+
+    return function (_x25, _x26) {
+      return _ref26.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.initiateSelfDestruct =
+  /*#__PURE__*/
+  function () {
+    var _ref27 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee27(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee27$(_context27) {
+        while (1) {
+          switch (_context27.prev = _context27.next) {
+            case 0:
+              txParams = txParams || {};
+              _context27.next = 3;
+              return _this.contract.initiateSelfDestruct().send(txParams);
+
+            case 3:
+              txHash = _context27.sent;
+              return _context27.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context27.stop();
+          }
+        }
+      }, _callee27);
+    }));
+
+    return function (_x27) {
+      return _ref27.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.synthetixProxy =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee28() {
+    return regenerator_default.a.wrap(function _callee28$(_context28) {
+      while (1) {
+        switch (_context28.prev = _context28.next) {
+          case 0:
+            _context28.next = 2;
+            return _this.contract.synthetixProxy().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context28.abrupt("return", _context28.sent);
+
+          case 3:
+          case "end":
+            return _context28.stop();
+        }
+      }
+    }, _callee28);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.selfDestructBeneficiary =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee29() {
+    return regenerator_default.a.wrap(function _callee29$(_context29) {
+      while (1) {
+        switch (_context29.prev = _context29.next) {
+          case 0:
+            _context29.next = 2;
+            return _this.contract.selfDestructBeneficiary().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context29.abrupt("return", _context29.sent);
+
+          case 3:
+          case "end":
+            return _context29.stop();
+        }
+      }
+    }, _callee29);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _address {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setSynthetix =
+  /*#__PURE__*/
+  function () {
+    var _ref30 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee30(_address, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee30$(_context30) {
+        while (1) {
+          switch (_context30.prev = _context30.next) {
+            case 0:
+              txParams = txParams || {};
+              _context30.next = 3;
+              return _this.contract.setSynthetix(_address).send(txParams);
+
+            case 3:
+              txHash = _context30.sent;
+              return _context30.abrupt("return", {
+                hash: txHash
+              });
+
+            case 5:
+            case "end":
+              return _context30.stop();
+          }
+        }
+      }, _callee30);
+    }));
+
+    return function (_x28, _x29) {
+      return _ref30.apply(this, arguments);
+    };
+  }();
+}
+
+/* harmony default export */ var shasta_ArbRewarder = (ArbRewarder_ArbRewarder);
 // CONCATENATED MODULE: ./src/contracts/shasta/XDR.js
 
 
@@ -103742,6 +105224,7 @@ function iDEFI(contractSettings) {
 
 
 
+
 /* harmony default export */ var contracts_shasta = ({
   Depot: contracts_shasta_Depot,
   EscrowChecker: shasta_EscrowChecker,
@@ -103753,6 +105236,7 @@ function iDEFI(contractSettings) {
   SynthetixState: shasta_SynthetixState,
   RewardEscrow: shasta_RewardEscrow,
   DappMaintenance: shasta_DappMaintenance,
+  ArbRewarder: shasta_ArbRewarder,
   XDR: shasta_XDR,
   sEUR: shasta_sEUR,
   sJPY: shasta_sJPY,
