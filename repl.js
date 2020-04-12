@@ -1,5 +1,5 @@
 require('@babel/register');
-const BigNumber = require('BigNumber.js');
+const BigNumber = require('bignumber.js');
 
 const repl = require('repl');
 
