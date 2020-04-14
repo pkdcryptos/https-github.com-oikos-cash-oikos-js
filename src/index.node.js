@@ -19,6 +19,10 @@ export class SynthetixJs extends SynthetixJsBase {
    */
   constructor(contractSettings) {
     super(contractSettings, signers);
+
+    if (process.env.PRIVATE_KEY) {
+      this.contractSettings.tronWeb.setPrivateKey(process.env.PRIVATE_KEY);
+    }
   }
 }
 
