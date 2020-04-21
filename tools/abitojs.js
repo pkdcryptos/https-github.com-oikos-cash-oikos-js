@@ -5,7 +5,7 @@ const snx = require('@oikos/oikos');
 const docsDescriptions = require('../lib/docSrc/descriptions');
 
 const SUPPORTED_NETWORKS = {
-  // 1: 'mainnet',
+  1: 'mainnet',
   2: 'shasta',
 };
 

@@ -1,3 +1,4 @@
+
 import Depot from './Depot';
 import EscrowChecker from './EscrowChecker';
 import ExchangeRates from './ExchangeRates';
@@ -9,7 +10,7 @@ import SynthetixState from './SynthetixState';
 import RewardEscrow from './RewardEscrow';
 import DappMaintenance from './DappMaintenance';
 import ArbRewarder from './ArbRewarder';
-import XDR from './XDR';
+import ODR from './ODR';
 import sEUR from './sEUR';
 import sJPY from './sJPY';
 import sUSD from './sUSD';
@@ -44,48 +45,6 @@ import iCEX from './iCEX';
 import iDEFI from './iDEFI';
 
 export default {
-  Depot,
-  EscrowChecker,
-  ExchangeRates,
-  FeePool,
-  Synth,
-  Synthetix,
-  SynthetixEscrow,
-  SynthetixState,
-  RewardEscrow,
-  DappMaintenance,
-  ArbRewarder,
-  XDR,
-  sEUR,
-  sJPY,
-  sUSD,
-  sAUD,
-  sGBP,
-  sCHF,
-  sXAU,
-  sXAG,
-  sBTC,
-  sETH,
-  sBTT,
-  sBNB,
-  sMKR,
-  sTRX,
-  sXTZ,
-  sXRP,
-  sLTC,
-  sLINK,
-  sCEX,
-  sDEFI,
-  iBTC,
-  iTRX,
-  iETH,
-  iBTT,
-  iBNB,
-  iMKR,
-  iXTZ,
-  iXRP,
-  iLINK,
-  iLTC,
-  iCEX,
-  iDEFI,
+  Depot, EscrowChecker, ExchangeRates, FeePool, Synth, Synthetix, SynthetixEscrow, SynthetixState, RewardEscrow, DappMaintenance, ArbRewarder, ODR, sEUR, sJPY, sUSD, sAUD, sGBP, sCHF, sXAU, sXAG, sBTC, sETH, sBTT, sBNB, sMKR, sTRX, sXTZ, sXRP, sLTC, sLINK, sCEX, sDEFI, iBTC, iTRX, iETH, iBTT, iBNB, iMKR, iXTZ, iXRP, iLINK, iLTC, iCEX, iDEFI
 };
+  

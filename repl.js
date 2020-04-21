@@ -1,10 +1,12 @@
 require('@babel/register');
 const BigNumber = require('bignumber.js');
+const network2id = require('./src/network2id').default;
 
 const repl = require('repl');
 
 const { SynthetixJs } = require('./src/index.node');
-const snxjs = new SynthetixJs({ networkId: 2 });
+const networkId = network2id(process.env.TRON_NETWORK || 'shasta');
+const snxjs = new SynthetixJs({ networkId });
 snxjs.contractSettings.tronWeb.setPrivateKey(process.env.PRIVATE_KEY);
 
 const bn = o => BigNumber(o._hex).toString();

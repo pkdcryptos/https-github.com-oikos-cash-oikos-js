@@ -1,15 +1,15 @@
 
     import ContractSettings from '../../contractSettings';
     import tronContract from '../../tronContract';
-    import abi from '../../../lib/abis/shasta/PurgeableSynth';
+    import abi from '../../../lib/abis/shasta/Synth';
 
     /** @constructor
      * @param contractSettings {ContractSettings}
      */
-    function iCEX(contractSettings) {
+    function ODR(contractSettings) {
       this.contractSettings = contractSettings || new ContractSettings();
 
-      const address = this.contractSettings.addressList['ProxyiCEX']
+      const address = this.contractSettings.addressList['ProxyODR']
       const tronWeb = this.contractSettings.tronWeb;
       this.signer = this.contractSettings.signer;
       this.contract = tronContract(abi, address, tronWeb, this.signer);
@@ -89,6 +89,7 @@
     };
   
   /**
+   * Override ERC20 transferFrom function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param from {String<TrxAddress>}
    * @param to {String<TrxAddress>}
@@ -125,30 +126,10 @@
    * Call (no gas consumed, doesn't require signer)
    * @returns String<TrxAddress>
    **/
-      this.exchangeRates = async () => {
-        return await this.contract.exchangeRates().call({ _isConstant: true })
-      };
-    
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String<TrxAddress>
-   **/
       this.nominatedOwner = async () => {
         return await this.contract.nominatedOwner().call({ _isConstant: true })
       };
     
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _exchangeRates {String<TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-    this.setExchangeRates = async (_exchangeRates, txParams) => {
-      txParams = txParams || {};
-      const txHash = await this.contract.setExchangeRates(_exchangeRates).send(txParams);
-      return { hash: txHash };
-    };
-  
   /**
    * Call (no gas consumed, doesn't require signer)
    * @param account {String<TrxAddress>}
@@ -169,14 +150,6 @@
       return { hash: txHash };
     };
   
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-      this.maxSupplyToPurgeInUSD = async () => {
-        return await this.contract.maxSupplyToPurgeInUSD().call({ _isConstant: true })
-      };
-    
   /**
    * Transaction (consumes gas, requires signer)
    * @param account {String<TrxAddress>}
@@ -283,6 +256,7 @@
       };
     
   /**
+   * Override ERC20 transfer function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param to {String<TrxAddress>}
    * @param value {BigNumber}
@@ -292,18 +266,6 @@
     this.transfer = async (to, value, txParams) => {
       txParams = txParams || {};
       const txHash = await this.contract.transfer(to, value).send(txParams);
-      return { hash: txHash };
-    };
-  
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param addresses {address[]}
-   * @param txParams {TxParams}
-  
-   **/
-    this.purge = async (addresses, txParams) => {
-      txParams = txParams || {};
-      const txHash = await this.contract.purge(addresses).send(txParams);
       return { hash: txHash };
     };
   
@@ -430,5 +392,5 @@
   ;
     }
 
-    export default iCEX;
+    export default ODR;
   
