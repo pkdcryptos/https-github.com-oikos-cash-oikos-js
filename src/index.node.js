@@ -20,8 +20,16 @@ export class SynthetixJs extends SynthetixJsBase {
   constructor(contractSettings) {
     super(contractSettings, signers);
 
-    if (process.env.PRIVATE_KEY) {
-      this.contractSettings.tronWeb.setPrivateKey(process.env.PRIVATE_KEY);
+    // use diff env variables for mainnet and shasta
+    let privKey;
+    const isMainnet = contractSettings.networkId === 1;
+    if (isMainnet) {
+      privKey = process.env.DEPLOY_PRIVATE_KEY_MAINNET;
+    } else {
+      privKey = process.env.PRIVATE_KEY;
+    }
+    if (privKey) {
+      this.contractSettings.tronWeb.setPrivateKey(privKey);
     }
   }
 }

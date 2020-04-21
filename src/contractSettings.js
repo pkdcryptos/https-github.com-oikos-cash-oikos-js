@@ -22,7 +22,7 @@ const createTronWeb = (providerUrl, privateKey = zeroPrivateKey) => {
 };
 
 const SUPPORTED_NETWORKS = {
-  // 1: 'mainnet',
+  1: 'mainnet',
   2: 'shasta',
 };
 
