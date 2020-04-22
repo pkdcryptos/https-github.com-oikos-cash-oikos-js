@@ -1,7 +1,8 @@
 import { SynthetixJs } from '../index.node';
+import { guessNetworkId } from '../network2id';
 
 const run = async () => {
-  const snx = new SynthetixJs({ networkId: 2 });
+  const snx = new SynthetixJs({ networkId: guessNetworkId() });
   const { parseBytes32String, formatEther } = snx.ethers.utils;
 
   const currKeys = await snx.Synthetix.availableCurrencyKeys();
