@@ -1,7 +1,7 @@
 import { SynthetixJs } from '../index.node';
+import { guessNetworkId } from '../network2id';
 
-// shasta
-const snx = new SynthetixJs({ networkId: 2 });
+const snx = new SynthetixJs({ networkId: guessNetworkId() });
 
 const run = async () => {
   const res = await snx.FeePool.closeCurrentFeePeriod();
