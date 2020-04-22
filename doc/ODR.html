@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>FeePool - Documentation</title>
+    <title>ODR - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">FeePool</h1>
+    <h1 class="page-title">ODR</h1>
     
 
     
@@ -44,7 +44,7 @@
 <header>
     
         <h2>
-        FeePool
+        ODR
         </h2>
         
     
@@ -58,7 +58,7 @@
 
     
 
-    <h4 class="name" id="FeePool"><span class="type-signature"></span>new FeePool<span class="signature">(contractSettings)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="ODR"><span class="type-signature"></span>new ODR<span class="signature">(contractSettings)</span><span class="type-signature"></span></h4>
 
     
 
@@ -70,7 +70,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line8">line 8</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -223,7 +223,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line311">line 311</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line145">line 145</a>
     </li></ul></dd>
     
 
@@ -347,7 +347,7 @@
 
     
 
-    <h4 class="name" id="amountReceivedFromExchange"><span class="type-signature"></span>amountReceivedFromExchange<span class="signature">(value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="allowance"><span class="type-signature"></span>allowance<span class="signature">(owner, spender)</span><span class="type-signature"></span></h4>
 
     
 
@@ -359,7 +359,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line572">line 572</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line359">line 359</a>
     </li></ul></dd>
     
 
@@ -437,13 +437,36 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>owner</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">BigNumber</span>
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>spender</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
 
 
             
@@ -493,7 +516,7 @@
 
     
 
-    <h4 class="name" id="amountReceivedFromTransfer"><span class="type-signature"></span>amountReceivedFromTransfer<span class="signature">(value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="approve"><span class="type-signature"></span>approve<span class="signature">(spender, value, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -505,7 +528,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line464">line 464</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line31">line 31</a>
     </li></ul></dd>
     
 
@@ -545,7 +568,7 @@
 
 
 <div class="description">
-    Call (no gas consumed, doesn't require signer)
+    Transaction (consumes gas, requires signer)
 </div>
 
 
@@ -579,6 +602,29 @@
     </thead>
 
     <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>spender</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
     
 
         <tr>
@@ -590,844 +636,6 @@
             
                 
 <span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="appendAccountIssuanceRecord"><span class="type-signature"></span>appendAccountIssuanceRecord<span class="signature">(account, debtRatio, debtEntryIndex, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line325">line 325</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>debtRatio</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>debtEntryIndex</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="appendVestingEntry"><span class="type-signature"></span>appendVestingEntry<span class="signature">(account, quantity, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line453">line 453</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>quantity</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="approveClaimOnBehalf"><span class="type-signature"></span>approveClaimOnBehalf<span class="signature">(account, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line203">line 203</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="claimFees"><span class="type-signature"></span>claimFees<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line537">line 537</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="claimOnBehalf"><span class="type-signature"></span>claimOnBehalf<span class="signature">(claimingForAddress, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line272">line 272</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>claimingForAddress</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
 
 
             
@@ -1500,7 +708,7 @@
 
     
 
-    <h4 class="name" id="closeCurrentFeePeriod"><span class="type-signature"></span>closeCurrentFeePeriod<span class="signature">(txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="balanceOf"><span class="type-signature"></span>balanceOf<span class="signature">(account)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1512,240 +720,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line182">line 182</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="delegates"><span class="type-signature"></span>delegates<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line262">line 262</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<TrxAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="effectiveDebtRatioForPeriod"><span class="type-signature"></span>effectiveDebtRatioForPeriod<span class="signature">(account, period)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line55">line 55</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line136">line 136</a>
     </li></ul></dd>
     
 
@@ -1843,29 +818,6 @@
         </tr>
 
     
-
-        <tr>
-            
-                <td class="name"><code>period</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
     </tbody>
 </table>
 
@@ -1902,7 +854,7 @@
 
     
 
-    <h4 class="name" id="exchangeFeeIncurred"><span class="type-signature"></span>exchangeFeeIncurred<span class="signature">(value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="burn"><span class="type-signature"></span>burn<span class="signature">(account, amount, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -1914,7 +866,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line512">line 512</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line230">line 230</a>
     </li></ul></dd>
     
 
@@ -1954,7 +906,7 @@
 
 
 <div class="description">
-    Call (no gas consumed, doesn't require signer)
+    Transaction (consumes gas, requires signer)
 </div>
 
 
@@ -1992,13 +944,59 @@
 
         <tr>
             
-                <td class="name"><code>value</code></td>
+                <td class="name"><code>account</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
 
 
             
@@ -2030,16 +1028,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
 
 
 
@@ -2048,7 +1036,7 @@
 
     
 
-    <h4 class="name" id="exchangeFeeRate"><span class="type-signature"></span>exchangeFeeRate<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="currencyKey"><span class="type-signature"></span>currencyKey<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2060,7 +1048,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line65">line 65</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line349">line 349</a>
     </li></ul></dd>
     
 
@@ -2131,7 +1119,7 @@
 
         
 <div class="param-desc">
-    BigNumber
+    bytes32
 </div>
 
 
@@ -2145,7 +1133,7 @@
 
     
 
-    <h4 class="name" id="FEE_ADDRESS"><span class="type-signature"></span>FEE_ADDRESS<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="decimals"><span class="type-signature"></span>decimals<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2157,104 +1145,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line605">line 605</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<TrxAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="FEE_PERIOD_LENGTH"><span class="type-signature"></span>FEE_PERIOD_LENGTH<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line520">line 520</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line108">line 108</a>
     </li></ul></dd>
     
 
@@ -2339,7 +1230,7 @@
 
     
 
-    <h4 class="name" id="feePeriodDuration"><span class="type-signature"></span>feePeriodDuration<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="feePoolProxy"><span class="type-signature"></span>feePoolProxy<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -2351,104 +1242,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line129">line 129</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="feePoolEternalStorage"><span class="type-signature"></span>feePoolEternalStorage<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line213">line 213</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line321">line 321</a>
     </li></ul></dd>
     
 
@@ -2525,981 +1319,6 @@
 
 
     
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="feePoolState"><span class="type-signature"></span>feePoolState<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line588">line 588</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<TrxAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="feesAvailable"><span class="type-signature"></span>feesAvailable<span class="signature">(account, currencyKey)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line359">line 359</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>currencyKey</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">bytes32</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    Object
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="feesByPeriod"><span class="type-signature"></span>feesByPeriod<span class="signature">(account)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line173">line 173</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    uint256[2][3]
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getLastFeeWithdrawal"><span class="type-signature"></span>getLastFeeWithdrawal<span class="signature">(_claimingAddress)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line45">line 45</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>_claimingAddress</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="getPenaltyThresholdRatio"><span class="type-signature"></span>getPenaltyThresholdRatio<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line402">line 402</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="importFeePeriod"><span class="type-signature"></span>importFeePeriod<span class="signature">(feePeriodIndex, feePeriodId, startingDebtIndex, startTime, feesToDistribute, feesClaimed, rewardsToDistribute, rewardsClaimed, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line419">line 419</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>feePeriodIndex</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>feePeriodId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>startingDebtIndex</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>startTime</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>feesToDistribute</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>feesClaimed</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>rewardsToDistribute</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>rewardsClaimed</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3520,7 +1339,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line493">line 493</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line295">line 295</a>
     </li></ul></dd>
     
 
@@ -3656,7 +1475,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line97">line 97</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line65">line 65</a>
     </li></ul></dd>
     
 
@@ -3753,7 +1572,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line378">line 378</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line219">line 219</a>
     </li></ul></dd>
     
 
@@ -3838,7 +1657,7 @@
 
     
 
-    <h4 class="name" id="isFeesClaimable"><span class="type-signature"></span>isFeesClaimable<span class="signature">(account)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="issue"><span class="type-signature"></span>issue<span class="signature">(account, amount, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -3850,7 +1669,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line242">line 242</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line158">line 158</a>
     </li></ul></dd>
     
 
@@ -3890,7 +1709,7 @@
 
 
 <div class="description">
-    Call (no gas consumed, doesn't require signer)
+    Transaction (consumes gas, requires signer)
 </div>
 
 
@@ -3948,6 +1767,52 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -3966,210 +1831,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    boolean
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="MAX_EXCHANGE_FEE_RATE"><span class="type-signature"></span>MAX_EXCHANGE_FEE_RATE<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line629">line 629</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="MAX_FEE_PERIOD_DURATION"><span class="type-signature"></span>MAX_FEE_PERIOD_DURATION<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line621">line 621</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
-</div>
-
-
-
-    
 
 
 
@@ -4190,7 +1851,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line555">line 555</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line329">line 329</a>
     </li></ul></dd>
     
 
@@ -4275,7 +1936,7 @@
 
     
 
-    <h4 class="name" id="MIN_FEE_PERIOD_DURATION"><span class="type-signature"></span>MIN_FEE_PERIOD_DURATION<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="name"><span class="type-signature"></span>name<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -4287,7 +1948,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line547">line 547</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -4358,7 +2019,7 @@
 
         
 <div class="param-desc">
-    BigNumber
+    String
 </div>
 
 
@@ -4384,7 +2045,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line221">line 221</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line127">line 127</a>
     </li></ul></dd>
     
 
@@ -4481,7 +2142,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line87">line 87</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line55">line 55</a>
     </li></ul></dd>
     
 
@@ -4640,7 +2301,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line337">line 337</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line168">line 168</a>
     </li></ul></dd>
     
 
@@ -4737,665 +2398,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line613">line 613</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<TrxAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="recentFeePeriods"><span class="type-signature"></span>recentFeePeriods<span class="signature">(index)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line193">line 193</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>index</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    Object
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="recordFeePaid"><span class="type-signature"></span>recordFeePaid<span class="signature">(xdrAmount, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line139">line 139</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>xdrAmount</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="removeClaimOnBehalf"><span class="type-signature"></span>removeClaimOnBehalf<span class="signature">(account, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line284">line 284</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>account</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="rewardEscrow"><span class="type-signature"></span>rewardEscrow<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line386">line 386</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<TrxAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="rewardsAuthority"><span class="type-signature"></span>rewardsAuthority<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line528">line 528</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line375">line 375</a>
     </li></ul></dd>
     
 
@@ -5492,7 +2495,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line368">line 368</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line209">line 209</a>
     </li></ul></dd>
     
 
@@ -5628,7 +2631,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line394">line 394</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line252">line 252</a>
     </li></ul></dd>
     
 
@@ -5725,7 +2728,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line503">line 503</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line313">line 313</a>
     </li></ul></dd>
     
 
@@ -5822,7 +2825,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line472">line 472</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line274">line 274</a>
     </li></ul></dd>
     
 
@@ -5907,7 +2910,7 @@
 
     
 
-    <h4 class="name" id="setDelegateApprovals"><span class="type-signature"></span>setDelegateApprovals<span class="signature">(_delegates, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setFeePoolProxy"><span class="type-signature"></span>setFeePoolProxy<span class="signature">(_feePoolProxy, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -5919,7 +2922,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line252">line 252</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line339">line 339</a>
     </li></ul></dd>
     
 
@@ -5997,484 +3000,7 @@
 
         <tr>
             
-                <td class="name"><code>_delegates</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="setExchangeFeeRate"><span class="type-signature"></span>setExchangeFeeRate<span class="signature">(_exchangeFeeRate, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line231">line 231</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>_exchangeFeeRate</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="setFeePeriodDuration"><span class="type-signature"></span>setFeePeriodDuration<span class="signature">(_feePeriodDuration, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line22">line 22</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>_feePeriodDuration</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="setFeePoolState"><span class="type-signature"></span>setFeePoolState<span class="signature">(_feePoolState, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line34">line 34</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>_feePoolState</code></td>
+                <td class="name"><code>_feePoolProxy</code></td>
             
 
             <td class="type">
@@ -6555,7 +3081,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line75">line 75</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -6714,7 +3240,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line482">line 482</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line284">line 284</a>
     </li></ul></dd>
     
 
@@ -6873,7 +3399,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line347">line 347</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line198">line 198</a>
     </li></ul></dd>
     
 
@@ -7020,324 +3546,6 @@
 
     
 
-    <h4 class="name" id="setRewardsAuthority"><span class="type-signature"></span>setRewardsAuthority<span class="signature">(_rewardsAuthority, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line107">line 107</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>_rewardsAuthority</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String.&lt;TrxAddress></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="setRewardsToDistribute"><span class="type-signature"></span>setRewardsToDistribute<span class="signature">(amount, txParams)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line639">line 639</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Transaction (consumes gas, requires signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>amount</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">BigNumber</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>txParams</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">TxParams</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
     <h4 class="name" id="setSelfDestructBeneficiary"><span class="type-signature"></span>setSelfDestructBeneficiary<span class="signature">(_beneficiary, txParams)</span><span class="type-signature"></span></h4>
 
     
@@ -7350,7 +3558,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line119">line 119</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line83">line 83</a>
     </li></ul></dd>
     
 
@@ -7497,7 +3705,7 @@
 
     
 
-    <h4 class="name" id="setSynthetix"><span class="type-signature"></span>setSynthetix<span class="signature">(_synthetix, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setSynthetixProxy"><span class="type-signature"></span>setSynthetixProxy<span class="signature">(_synthetixProxy, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -7509,7 +3717,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line651">line 651</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line178">line 178</a>
     </li></ul></dd>
     
 
@@ -7587,7 +3795,7 @@
 
         <tr>
             
-                <td class="name"><code>_synthetix</code></td>
+                <td class="name"><code>_synthetixProxy</code></td>
             
 
             <td class="type">
@@ -7656,7 +3864,7 @@
 
     
 
-    <h4 class="name" id="setTargetThreshold"><span class="type-signature"></span>setTargetThreshold<span class="signature">(_percent, txParams)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setTokenState"><span class="type-signature"></span>setTokenState<span class="signature">(_tokenState, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -7668,7 +3876,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line151">line 151</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line242">line 242</a>
     </li></ul></dd>
     
 
@@ -7746,7 +3954,166 @@
 
         <tr>
             
-                <td class="name"><code>_percent</code></td>
+                <td class="name"><code>_tokenState</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setTotalSupply"><span class="type-signature"></span>setTotalSupply<span class="signature">(amount, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line385">line 385</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Transaction (consumes gas, requires signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>amount</code></td>
             
 
             <td class="type">
@@ -7815,7 +4182,7 @@
 
     
 
-    <h4 class="name" id="synthetix"><span class="type-signature"></span>synthetix<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="symbol"><span class="type-signature"></span>symbol<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -7827,7 +4194,104 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line302">line 302</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line188">line 188</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="synthetixProxy"><span class="type-signature"></span>synthetixProxy<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line305">line 305</a>
     </li></ul></dd>
     
 
@@ -7899,200 +4363,6 @@
         
 <div class="param-desc">
     String<TrxAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="synthetixState"><span class="type-signature"></span>synthetixState<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line563">line 563</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    String<TrxAddress>
-</div>
-
-
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="targetThreshold"><span class="type-signature"></span>targetThreshold<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line580">line 580</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Call (no gas consumed, doesn't require signer)
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    BigNumber
 </div>
 
 
@@ -8118,7 +4388,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line162">line 162</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line117">line 117</a>
     </li></ul></dd>
     
 
@@ -8242,7 +4512,7 @@
 
     
 
-    <h4 class="name" id="totalFeesAvailable"><span class="type-signature"></span>totalFeesAvailable<span class="signature">(currencyKey)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="tokenState"><span class="type-signature"></span>tokenState<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -8254,7 +4524,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line597">line 597</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line367">line 367</a>
     </li></ul></dd>
     
 
@@ -8295,6 +4565,201 @@
 
 <div class="description">
     Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    String<TrxAddress>
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="totalSupply"><span class="type-signature"></span>totalSupply<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line73">line 73</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Call (no gas consumed, doesn't require signer)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    BigNumber
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="transfer"><span class="type-signature"></span>transfer<span class="signature">(to, value, txParams)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line264">line 264</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Override ERC20 transfer function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
+Transaction (consumes gas, requires signer)
 </div>
 
 
@@ -8332,13 +4797,59 @@
 
         <tr>
             
-                <td class="name"><code>currencyKey</code></td>
+                <td class="name"><code>to</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">bytes32</span>
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
 
 
             
@@ -8374,7 +4885,7 @@
 
         
 <div class="param-desc">
-    BigNumber
+    boolean
 </div>
 
 
@@ -8388,7 +4899,7 @@
 
     
 
-    <h4 class="name" id="totalRewardsAvailable"><span class="type-signature"></span>totalRewardsAvailable<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="transferFrom"><span class="type-signature"></span>transferFrom<span class="signature">(from, to, value, txParams)</span><span class="type-signature"></span></h4>
 
     
 
@@ -8400,7 +4911,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="contracts_shasta_FeePool.js.html">contracts/shasta/FeePool.js</a>, <a href="contracts_shasta_FeePool.js.html#line294">line 294</a>
+        <a href="contracts_shasta_ODR.js.html">contracts/shasta/ODR.js</a>, <a href="contracts_shasta_ODR.js.html#line98">line 98</a>
     </li></ul></dd>
     
 
@@ -8440,7 +4951,8 @@
 
 
 <div class="description">
-    Call (no gas consumed, doesn't require signer)
+    Override ERC20 transferFrom function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
+Transaction (consumes gas, requires signer)
 </div>
 
 
@@ -8451,6 +4963,124 @@
 
 
 
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>from</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>to</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String.&lt;TrxAddress></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigNumber</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>txParams</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">TxParams</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -8471,7 +5101,7 @@
 
         
 <div class="param-desc">
-    BigNumber
+    boolean
 </div>
 
 
