@@ -13,6 +13,8 @@
     "lint": "eslint .",
     "docs": "jsdoc src/index*.js src/contracts/shasta src/util -r -d ./doc -c jsdoc.json --readme Readme.md",
     "repl": "NODE_OPTIONS='--experimental-repl-await' node ./repl",
+    "repl:shasta": "TRON_NETWORK=shasta npm run repl",
+    "repl:mainnet": "TRON_NETWORK=mainnet npm run repl",
     "format": "prettier --write '{tools,lib,src,__tests__}/**/*.js'",
     "abitojs": "node ./tools/abitojs.js",
     "webpack": "webpack --mode=production",
