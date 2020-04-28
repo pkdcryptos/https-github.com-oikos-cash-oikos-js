@@ -22,6 +22,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.purgeAccount = async (account, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.purgeAccount(account).send(txParams);
     return { hash: txHash };
   };
@@ -34,6 +39,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.nominateNewOwner = async (_owner, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
     return { hash: txHash };
   };
@@ -59,6 +69,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.appendVestingEntry = async (account, time, quantity, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.appendVestingEntry(account, time, quantity).send(txParams);
     return { hash: txHash };
   };
@@ -100,6 +115,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.vest = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.vest().send(txParams);
     return { hash: txHash };
   };
@@ -160,6 +180,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.acceptOwnership = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.acceptOwnership().send(txParams);
     return { hash: txHash };
   };
@@ -212,6 +237,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.addVestingSchedule = async (account, times, quantities, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract
       .addVestingSchedule(account, times, quantities)
       .send(txParams);
@@ -238,6 +268,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.withdrawSynthetix = async (quantity, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.withdrawSynthetix(quantity).send(txParams);
     return { hash: txHash };
   };
@@ -261,6 +296,11 @@ function SynthetixEscrow(contractSettings) {
    **/
   this.setSynthetix = async (_synthetix, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setSynthetix(_synthetix).send(txParams);
     return { hash: txHash };
   };

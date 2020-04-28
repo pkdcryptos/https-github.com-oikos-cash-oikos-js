@@ -21,6 +21,11 @@ function DappMaintenance(contractSettings) {
    **/
   this.setMaintenanceModeMintr = async (isPaused, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setMaintenanceModeMintr(isPaused).send(txParams);
     return { hash: txHash };
   };
@@ -33,6 +38,11 @@ function DappMaintenance(contractSettings) {
    **/
   this.nominateNewOwner = async (_owner, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
     return { hash: txHash };
   };
@@ -45,6 +55,11 @@ function DappMaintenance(contractSettings) {
    **/
   this.setMaintenanceModeAll = async (isPaused, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setMaintenanceModeAll(isPaused).send(txParams);
     return { hash: txHash };
   };
@@ -72,6 +87,11 @@ function DappMaintenance(contractSettings) {
    **/
   this.acceptOwnership = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.acceptOwnership().send(txParams);
     return { hash: txHash };
   };
@@ -100,6 +120,11 @@ function DappMaintenance(contractSettings) {
    **/
   this.setMaintenanceModeSX = async (isPaused, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setMaintenanceModeSX(isPaused).send(txParams);
     return { hash: txHash };
   };

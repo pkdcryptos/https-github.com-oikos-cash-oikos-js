@@ -373,6 +373,11 @@ const generateFunctionStr = (abiFn, source) => {
   return `${jsdoc}
     this.${abiFn.name} = async (${paramsStr}) => {
       txParams = txParams || {};
+      txParams = {
+        // fee limit in SUN
+        feeLimit: 10000000,
+        ...txParams
+      };
       const txHash = await this.contract.${abiFn.name}(${methodParamsStr}).send(txParams);
       return { hash: txHash };
     };

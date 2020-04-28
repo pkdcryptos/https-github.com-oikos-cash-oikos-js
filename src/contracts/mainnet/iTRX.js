@@ -30,6 +30,11 @@ function iTRX(contractSettings) {
    **/
   this.approve = async (spender, value, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.approve(spender, value).send(txParams);
     return { hash: txHash };
   };
@@ -42,6 +47,11 @@ function iTRX(contractSettings) {
    **/
   this.setIntegrationProxy = async (_integrationProxy, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setIntegrationProxy(_integrationProxy).send(txParams);
     return { hash: txHash };
   };
@@ -54,6 +64,11 @@ function iTRX(contractSettings) {
    **/
   this.nominateNewOwner = async (_owner, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
     return { hash: txHash };
   };
@@ -82,6 +97,11 @@ function iTRX(contractSettings) {
    **/
   this.setSelfDestructBeneficiary = async (_beneficiary, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setSelfDestructBeneficiary(_beneficiary).send(txParams);
     return { hash: txHash };
   };
@@ -96,6 +116,11 @@ function iTRX(contractSettings) {
    **/
   this.transferFrom = async (from, to, value, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.transferFrom(from, to, value).send(txParams);
     return { hash: txHash };
   };
@@ -115,6 +140,11 @@ function iTRX(contractSettings) {
    **/
   this.terminateSelfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.terminateSelfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -143,6 +173,11 @@ function iTRX(contractSettings) {
    **/
   this.setExchangeRates = async (_exchangeRates, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setExchangeRates(_exchangeRates).send(txParams);
     return { hash: txHash };
   };
@@ -163,6 +198,11 @@ function iTRX(contractSettings) {
    **/
   this.acceptOwnership = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.acceptOwnership().send(txParams);
     return { hash: txHash };
   };
@@ -184,6 +224,11 @@ function iTRX(contractSettings) {
    **/
   this.issue = async (account, amount, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.issue(account, amount).send(txParams);
     return { hash: txHash };
   };
@@ -204,6 +249,11 @@ function iTRX(contractSettings) {
    **/
   this.setSynthetixProxy = async (_synthetixProxy, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setSynthetixProxy(_synthetixProxy).send(txParams);
     return { hash: txHash };
   };
@@ -224,6 +274,11 @@ function iTRX(contractSettings) {
    **/
   this.setProxy = async (_proxy, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setProxy(_proxy).send(txParams);
     return { hash: txHash };
   };
@@ -235,6 +290,11 @@ function iTRX(contractSettings) {
    **/
   this.selfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.selfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -256,6 +316,11 @@ function iTRX(contractSettings) {
    **/
   this.burn = async (account, amount, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.burn(account, amount).send(txParams);
     return { hash: txHash };
   };
@@ -268,6 +333,11 @@ function iTRX(contractSettings) {
    **/
   this.setTokenState = async (_tokenState, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setTokenState(_tokenState).send(txParams);
     return { hash: txHash };
   };
@@ -289,6 +359,11 @@ function iTRX(contractSettings) {
    **/
   this.transfer = async (to, value, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.transfer(to, value).send(txParams);
     return { hash: txHash };
   };
@@ -301,6 +376,11 @@ function iTRX(contractSettings) {
    **/
   this.purge = async (addresses, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.purge(addresses).send(txParams);
     return { hash: txHash };
   };
@@ -321,6 +401,11 @@ function iTRX(contractSettings) {
    **/
   this.setMessageSender = async (sender, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setMessageSender(sender).send(txParams);
     return { hash: txHash };
   };
@@ -332,6 +417,11 @@ function iTRX(contractSettings) {
    **/
   this.initiateSelfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.initiateSelfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -376,6 +466,11 @@ function iTRX(contractSettings) {
    **/
   this.setFeePoolProxy = async (_feePoolProxy, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setFeePoolProxy(_feePoolProxy).send(txParams);
     return { hash: txHash };
   };
@@ -422,6 +517,11 @@ function iTRX(contractSettings) {
    **/
   this.setTotalSupply = async (amount, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setTotalSupply(amount).send(txParams);
     return { hash: txHash };
   };

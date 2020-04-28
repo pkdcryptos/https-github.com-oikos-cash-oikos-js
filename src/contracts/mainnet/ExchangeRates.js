@@ -49,6 +49,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.nominateNewOwner = async (_owner, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
     return { hash: txHash };
   };
@@ -69,6 +74,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.setSelfDestructBeneficiary = async (_beneficiary, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setSelfDestructBeneficiary(_beneficiary).send(txParams);
     return { hash: txHash };
   };
@@ -81,6 +91,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.removeAggregator = async (currencyKey, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.removeAggregator(currencyKey).send(txParams);
     return { hash: txHash };
   };
@@ -110,6 +125,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.terminateSelfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.terminateSelfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -123,6 +143,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.addAggregator = async (currencyKey, aggregatorAddress, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.addAggregator(currencyKey, aggregatorAddress).send(txParams);
     return { hash: txHash };
   };
@@ -135,6 +160,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.deleteRate = async (currencyKey, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.deleteRate(currencyKey).send(txParams);
     return { hash: txHash };
   };
@@ -194,6 +224,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.acceptOwnership = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.acceptOwnership().send(txParams);
     return { hash: txHash };
   };
@@ -206,6 +241,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.setRateStalePeriod = async (_time, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setRateStalePeriod(_time).send(txParams);
     return { hash: txHash };
   };
@@ -218,6 +258,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.setOracle = async (_oracle, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setOracle(_oracle).send(txParams);
     return { hash: txHash };
   };
@@ -254,6 +299,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.selfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.selfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -314,6 +364,11 @@ function ExchangeRates(contractSettings) {
     txParams
   ) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract
       .setInversePricing(
         currencyKey,
@@ -351,6 +406,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.initiateSelfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.initiateSelfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -365,6 +425,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.updateRates = async (currencyKeys, newRates, timeSent, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.updateRates(currencyKeys, newRates, timeSent).send(txParams);
     return { hash: txHash };
   };
@@ -394,6 +459,11 @@ function ExchangeRates(contractSettings) {
    **/
   this.removeInversePricing = async (currencyKey, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.removeInversePricing(currencyKey).send(txParams);
     return { hash: txHash };
   };

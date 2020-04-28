@@ -29,6 +29,11 @@ function Synthetix(contractSettings) {
    **/
   this.setGasPriceLimit = async (_gasPriceLimit, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setGasPriceLimit(_gasPriceLimit).send(txParams);
     return { hash: txHash };
   };
@@ -42,6 +47,11 @@ function Synthetix(contractSettings) {
    **/
   this.approve = async (spender, value, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.approve(spender, value).send(txParams);
     return { hash: txHash };
   };
@@ -55,6 +65,11 @@ function Synthetix(contractSettings) {
    **/
   this.removeSynth = async (currencyKey, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.removeSynth(currencyKey).send(txParams);
     return { hash: txHash };
   };
@@ -66,6 +81,11 @@ function Synthetix(contractSettings) {
    **/
   this.mint = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.mint().send(txParams);
     return { hash: txHash };
   };
@@ -78,6 +98,11 @@ function Synthetix(contractSettings) {
    **/
   this.setIntegrationProxy = async (_integrationProxy, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setIntegrationProxy(_integrationProxy).send(txParams);
     return { hash: txHash };
   };
@@ -90,6 +115,11 @@ function Synthetix(contractSettings) {
    **/
   this.nominateNewOwner = async (_owner, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
     return { hash: txHash };
   };
@@ -127,6 +157,11 @@ function Synthetix(contractSettings) {
    **/
   this.setFeePool = async (_feePool, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setFeePool(_feePool).send(txParams);
     return { hash: txHash };
   };
@@ -151,6 +186,11 @@ function Synthetix(contractSettings) {
    **/
   this.setGasLimitOracle = async (_gasLimitOracle, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setGasLimitOracle(_gasLimitOracle).send(txParams);
     return { hash: txHash };
   };
@@ -163,6 +203,11 @@ function Synthetix(contractSettings) {
    **/
   this.setSelfDestructBeneficiary = async (_beneficiary, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setSelfDestructBeneficiary(_beneficiary).send(txParams);
     return { hash: txHash };
   };
@@ -178,6 +223,11 @@ function Synthetix(contractSettings) {
    **/
   this.transferFrom = async (from, to, value, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.transferFrom(from, to, value).send(txParams);
     return { hash: txHash };
   };
@@ -191,6 +241,11 @@ function Synthetix(contractSettings) {
    **/
   this.burnSynths = async (amount, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.burnSynths(amount).send(txParams);
     return { hash: txHash };
   };
@@ -219,6 +274,11 @@ function Synthetix(contractSettings) {
    **/
   this.terminateSelfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.terminateSelfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -256,6 +316,11 @@ function Synthetix(contractSettings) {
    **/
   this.setExchangeRates = async (_exchangeRates, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setExchangeRates(_exchangeRates).send(txParams);
     return { hash: txHash };
   };
@@ -317,6 +382,11 @@ function Synthetix(contractSettings) {
    **/
   this.acceptOwnership = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.acceptOwnership().send(txParams);
     return { hash: txHash };
   };
@@ -362,6 +432,11 @@ function Synthetix(contractSettings) {
    **/
   this.addSynth = async (synth, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.addSynth(synth).send(txParams);
     return { hash: txHash };
   };
@@ -375,6 +450,11 @@ function Synthetix(contractSettings) {
    **/
   this.issueSynths = async (amount, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.issueSynths(amount).send(txParams);
     return { hash: txHash };
   };
@@ -395,6 +475,11 @@ function Synthetix(contractSettings) {
    **/
   this.setExchangeEnabled = async (_exchangeEnabled, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setExchangeEnabled(_exchangeEnabled).send(txParams);
     return { hash: txHash };
   };
@@ -423,6 +508,11 @@ function Synthetix(contractSettings) {
    **/
   this.setProxy = async (_proxy, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setProxy(_proxy).send(txParams);
     return { hash: txHash };
   };
@@ -434,6 +524,11 @@ function Synthetix(contractSettings) {
    **/
   this.selfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.selfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -454,6 +549,11 @@ function Synthetix(contractSettings) {
    **/
   this.setTokenState = async (_tokenState, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setTokenState(_tokenState).send(txParams);
     return { hash: txHash };
   };
@@ -515,6 +615,11 @@ function Synthetix(contractSettings) {
    **/
   this.transfer = async (to, value, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.transfer(to, value).send(txParams);
     return { hash: txHash };
   };
@@ -539,6 +644,11 @@ function Synthetix(contractSettings) {
     txParams
   ) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract
       .synthInitiatedExchange(
         from,
@@ -567,6 +677,11 @@ function Synthetix(contractSettings) {
    **/
   this.issueMaxSynths = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.issueMaxSynths().send(txParams);
     return { hash: txHash };
   };
@@ -587,6 +702,11 @@ function Synthetix(contractSettings) {
    **/
   this.setMessageSender = async (sender, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setMessageSender(sender).send(txParams);
     return { hash: txHash };
   };
@@ -598,6 +718,11 @@ function Synthetix(contractSettings) {
    **/
   this.initiateSelfDestruct = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.initiateSelfDestruct().send(txParams);
     return { hash: txHash };
   };
@@ -626,6 +751,11 @@ function Synthetix(contractSettings) {
    **/
   this.setProtectionCircuit = async (_protectionCircuitIsActivated, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract
       .setProtectionCircuit(_protectionCircuitIsActivated)
       .send(txParams);
@@ -713,6 +843,11 @@ function Synthetix(contractSettings) {
    **/
   this.exchange = async (sourceCurrencyKey, sourceAmount, destinationCurrencyKey, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract
       .exchange(sourceCurrencyKey, sourceAmount, destinationCurrencyKey)
       .send(txParams);

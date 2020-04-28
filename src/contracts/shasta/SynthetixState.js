@@ -21,6 +21,11 @@ function SynthetixState(contractSettings) {
    **/
   this.setIssuanceRatio = async (_issuanceRatio, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setIssuanceRatio(_issuanceRatio).send(txParams);
     return { hash: txHash };
   };
@@ -42,6 +47,11 @@ function SynthetixState(contractSettings) {
    **/
   this.nominateNewOwner = async (_owner, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
     return { hash: txHash };
   };
@@ -61,6 +71,11 @@ function SynthetixState(contractSettings) {
    **/
   this.incrementTotalIssuerCount = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.incrementTotalIssuerCount().send(txParams);
     return { hash: txHash };
   };
@@ -73,6 +88,11 @@ function SynthetixState(contractSettings) {
    **/
   this.appendDebtLedgerValue = async (value, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.appendDebtLedgerValue(value).send(txParams);
     return { hash: txHash };
   };
@@ -94,6 +114,11 @@ function SynthetixState(contractSettings) {
    **/
   this.setPreferredCurrency = async (account, currencyKey, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setPreferredCurrency(account, currencyKey).send(txParams);
     return { hash: txHash };
   };
@@ -106,6 +131,11 @@ function SynthetixState(contractSettings) {
    **/
   this.setAssociatedContract = async (_associatedContract, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setAssociatedContract(_associatedContract).send(txParams);
     return { hash: txHash };
   };
@@ -125,6 +155,11 @@ function SynthetixState(contractSettings) {
    **/
   this.acceptOwnership = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.acceptOwnership().send(txParams);
     return { hash: txHash };
   };
@@ -163,6 +198,11 @@ function SynthetixState(contractSettings) {
    **/
   this.importIssuerData = async (accounts, sUSDAmounts, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.importIssuerData(accounts, sUSDAmounts).send(txParams);
     return { hash: txHash };
   };
@@ -176,6 +216,11 @@ function SynthetixState(contractSettings) {
    **/
   this.setCurrentIssuanceData = async (account, initialDebtOwnership, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract
       .setCurrentIssuanceData(account, initialDebtOwnership)
       .send(txParams);
@@ -198,6 +243,11 @@ function SynthetixState(contractSettings) {
    **/
   this.clearIssuanceData = async (account, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.clearIssuanceData(account).send(txParams);
     return { hash: txHash };
   };
@@ -226,6 +276,11 @@ function SynthetixState(contractSettings) {
    **/
   this.decrementTotalIssuerCount = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.decrementTotalIssuerCount().send(txParams);
     return { hash: txHash };
   };

@@ -21,6 +21,11 @@ function RewardEscrow(contractSettings) {
    **/
   this.nominateNewOwner = async (_owner, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.nominateNewOwner(_owner).send(txParams);
     return { hash: txHash };
   };
@@ -33,6 +38,11 @@ function RewardEscrow(contractSettings) {
    **/
   this.setFeePool = async (_feePool, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setFeePool(_feePool).send(txParams);
     return { hash: txHash };
   };
@@ -98,6 +108,11 @@ function RewardEscrow(contractSettings) {
    **/
   this.vest = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.vest().send(txParams);
     return { hash: txHash };
   };
@@ -164,6 +179,11 @@ function RewardEscrow(contractSettings) {
    **/
   this.acceptOwnership = async txParams => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.acceptOwnership().send(txParams);
     return { hash: txHash };
   };
@@ -212,6 +232,11 @@ function RewardEscrow(contractSettings) {
    **/
   this.appendVestingEntry = async (account, quantity, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.appendVestingEntry(account, quantity).send(txParams);
     return { hash: txHash };
   };
@@ -252,6 +277,11 @@ function RewardEscrow(contractSettings) {
    **/
   this.setSynthetix = async (_synthetix, txParams) => {
     txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
     const txHash = await this.contract.setSynthetix(_synthetix).send(txParams);
     return { hash: txHash };
   };
