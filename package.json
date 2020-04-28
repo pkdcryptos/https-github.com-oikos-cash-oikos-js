@@ -18,7 +18,7 @@
     "format": "prettier --write '{tools,lib,src,__tests__}/**/*.js'",
     "abitojs": "node ./tools/abitojs.js",
     "webpack": "webpack --mode=production",
-    "build": "npm run clear && npm run abitojs && npm run format && npm run docs && npm run webpack && npm test"
+    "build": "npm run clear && npm run abitojs && npm run format && npm run docs && npm run webpack"
   },
   "author": "Oikos",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "@ledgerhq/hw-app-eth": "4.74.2",
     "@ledgerhq/hw-transport": "4.74.2",
     "@ledgerhq/hw-transport-u2f": "4.74.2",
-    "@oikos/oikos": "^0.1.0",
+    "@oikos/oikos": "^0.2.0",
     "@walletconnect/web3-provider": "1.0.0-beta.47",
     "bs58check": "^2.1.2",
     "ethereumjs-tx": "1.3.7",
