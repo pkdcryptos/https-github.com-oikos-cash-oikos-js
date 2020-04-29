@@ -3,9 +3,12 @@ import { guessNetworkId } from '../network2id';
 
 const run = async () => {
   const snx = new SynthetixJs({ networkId: guessNetworkId() });
+
+  const b32 = snx.ethers.utils.formatBytes32String;
+
   const { parseBytes32String, formatEther } = snx.ethers.utils;
 
-  const currKeys = await snx.Synthetix.availableCurrencyKeys();
+  const currKeys = [b32('OKS'), ...(await snx.Synthetix.availableCurrencyKeys())];
 
   // TODO: XDR handled specially...
   const rates = await Promise.all(currKeys.map(k => snx.ExchangeRates.rateForCurrency(k)));
@@ -23,9 +26,10 @@ const run = async () => {
     const delta = now - time;
     const hours = (delta / (60 * 60)).toFixed(2);
     const isStale = delta > rateStalePeriod;
+    const currCode = parseBytes32String(currKey);
     console.log(
-      `${parseBytes32String(currKey)} = ${rate}$, updated ${hours} hours ago ${
-        isStale ? 'IS STALE' : ''
+      `${currCode} = ${rate}$, updated ${hours} hours ago ${
+        isStale ? (currCode === 'sUSD' ? '(sUSD is never stale)' : 'IS STALE') : ''
       }`
     );
   });
