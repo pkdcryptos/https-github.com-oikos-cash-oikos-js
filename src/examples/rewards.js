@@ -7,6 +7,8 @@ const snx = new SynthetixJs({ networkId: 1 });
 const args = process.argv.slice(2);
 const OKSrewardAmount = 100000;
 
+const txUrl = hash => `https://tronscan.io/#/transaction/${hash}`
+
 const run = async (address, amount = 0) => {
   let txHash;
   if (amount) {
@@ -18,13 +20,25 @@ const run = async (address, amount = 0) => {
       web3.utils.toWei(`${amount}`)
     ).send();
     console.log(`Transaction hash: ${txHash}`);
-    return;
+    process.exit(0)
   }
-  txHash = await snx.Synthetix.mint()
-  console.log(`Mint(), txHash ${txHash}`)
-  const unipool = snx.contractSettings.tronWeb.contract().at(unipoolAddress)
-  txHash = await unipool.notifyRewardAmount(web3.utils.toWei(`${OKSrewardAmount}`))
-  console.log(`notifyRewardAmount(), txHash ${txHash}`)
+  
+  try {
+    txHash = await snx.Synthetix.mint()
+    console.log(`Mint(), txHash ${txHash}`)
+    const unipool = snx.contractSettings.tronWeb.contract().at(unipoolAddress)
+    txHash = await unipool.notifyRewardAmount(web3.utils.toWei(`${OKSrewardAmount}`))
+    console.log(`notifyRewardAmount(), txHash ${txHash}`)
+  } catch (err) {
+    if (err.error) {
+      const receipt = err
+      console.log(txUrl(receipt.transaction.txID))
+      console.log(receipt.error)
+      process.exit(1)
+    }
+    throw err
+  }
+
 };
 
 if (args[0] === '?' || args[0] === '--h' || args[0] === 'help') {
@@ -39,11 +53,11 @@ if (args[0] === '?' || args[0] === '--h' || args[0] === 'help') {
 if (args.length === 2) {
   if (!tronWeb.isAddress(args[0])) {
     console.log(`invalid address`);
-    process.exit();
+    process.exit(1);
   }
   if (isNaN(args[1]) || Number(args[1]) === 0) {
     console.log(`invalid amount`);
-    process.exit();
+    process.exit(1);
   }
   run(args[0], args[1]).catch(console.error);
 } else {
