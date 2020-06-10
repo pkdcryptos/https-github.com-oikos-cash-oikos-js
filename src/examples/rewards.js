@@ -2,12 +2,12 @@ import { SynthetixJs } from '../index.node';
 import web3 from 'web3';
 import tronWeb from 'tronweb';
 
-const unipoolAddress = `415ea3ad9cfa4b303689cdd78e63cd2be9266d3173`
+const unipoolAddress = `415ea3ad9cfa4b303689cdd78e63cd2be9266d3173`;
 const snx = new SynthetixJs({ networkId: 1 });
 const args = process.argv.slice(2);
 const OKSrewardAmount = 100000;
 
-const txUrl = hash => `https://tronscan.io/#/transaction/${hash}`
+const txUrl = hash => `https://tronscan.io/#/transaction/${hash}`;
 
 const run = async (address, amount = 0) => {
   let txHash;
@@ -19,26 +19,25 @@ const run = async (address, amount = 0) => {
       address,
       web3.utils.toWei(`${amount}`)
     ).send();
-    console.log(`Transaction hash: ${txHash}`);
-    process.exit(0)
+    console.log(`addRewardDistribution(), txHash: ${txHash}`);
+    process.exit(0);
   }
-  
+ 
   try {
-    txHash = await snx.Synthetix.mint()
-    console.log(`Mint(), txHash ${txHash}`)
-    const unipool = snx.contractSettings.tronWeb.contract().at(unipoolAddress)
-    txHash = await unipool.notifyRewardAmount(web3.utils.toWei(`${OKSrewardAmount}`))
-    console.log(`notifyRewardAmount(), txHash ${txHash}`)
+    txHash = await snx.Synthetix.mint();
+    console.log(`mint(), txHash: ${txHash}`);
+    const unipool = snx.contractSettings.tronWeb.contract().at(unipoolAddress);
+    txHash = await unipool.notifyRewardAmount(web3.utils.toWei(`${OKSrewardAmount}`));
+    console.log(`notifyRewardAmount(), txHash: ${txHash}`);
   } catch (err) {
     if (err.error) {
-      const receipt = err
-      console.log(txUrl(receipt.transaction.txID))
-      console.log(receipt.error)
-      process.exit(1)
+      const receipt = err;
+      console.log(txUrl(receipt.transaction.txID));
+      console.log(receipt.error);
+      process.exit(1);
     }
-    throw err
+    throw err;
   }
-
 };
 
 if (args[0] === '?' || args[0] === '--h' || args[0] === 'help') {
