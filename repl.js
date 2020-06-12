@@ -23,5 +23,7 @@ const ctx = {
   BigNumber,
   b32: snxjs.ethers.utils.formatBytes32String,
   bn,
+  Tronweb: require('tronweb'),
+  tronweb: snxjs.contractSettings.tronWeb,
 };
 Object.assign(context, ctx);
