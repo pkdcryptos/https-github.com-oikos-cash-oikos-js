@@ -5,11 +5,11 @@ import tronWeb from 'tronweb';
 const unipoolAddress = `415ea3ad9cfa4b303689cdd78e63cd2be9266d3173`;
 const snx = new SynthetixJs({ networkId: 1 });
 const args = process.argv.slice(2);
-const OKSrewardAmount = 100000;
+const OKSrewardAmount = 9000;
 
 const txUrl = hash => `https://tronscan.io/#/transaction/${hash}`;
 
-const run = async (address, amount = 0) => {
+const run = async (address, amount=0) => {
   let txHash;
   if (amount) {
     const RewardsDistribution = await snx.contractSettings.tronWeb
@@ -22,12 +22,13 @@ const run = async (address, amount = 0) => {
     console.log(`addRewardDistribution(), txHash: ${txHash}`);
     process.exit(0);
   }
- 
+
   try {
     txHash = await snx.Synthetix.mint();
     console.log(`mint(), txHash: ${txHash}`);
-    const unipool = snx.contractSettings.tronWeb.contract().at(unipoolAddress);
-    txHash = await unipool.notifyRewardAmount(web3.utils.toWei(`${OKSrewardAmount}`));
+    const unipool = await snx.contractSettings.tronWeb.contract().at(unipoolAddress);
+    txHash = await unipool.notifyRewardAmount(web3.utils.toWei(`${OKSrewardAmount}`)).send();
+    console.log(txHash)
     console.log(`notifyRewardAmount(), txHash: ${txHash}`);
   } catch (err) {
     if (err.error) {
