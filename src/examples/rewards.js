@@ -9,7 +9,7 @@ const OKSrewardAmount = 9000;
 
 const txUrl = hash => `https://tronscan.io/#/transaction/${hash}`;
 
-const run = async (address, amount=0) => {
+const run = async (address, amount = 0) => {
   let txHash;
   if (amount) {
     const RewardsDistribution = await snx.contractSettings.tronWeb
@@ -28,7 +28,7 @@ const run = async (address, amount=0) => {
     console.log(`mint(), txHash: ${txHash}`);
     const unipool = await snx.contractSettings.tronWeb.contract().at(unipoolAddress);
     txHash = await unipool.notifyRewardAmount(web3.utils.toWei(`${OKSrewardAmount}`)).send();
-    console.log(txHash)
+    console.log(txHash);
     console.log(`notifyRewardAmount(), txHash: ${txHash}`);
   } catch (err) {
     if (err.error) {
