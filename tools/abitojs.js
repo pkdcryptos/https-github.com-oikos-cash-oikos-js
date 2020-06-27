@@ -34,6 +34,7 @@ const contracts = {
   FeePool: {
     target: 'ProxyFeePool',
   },
+  ProxyERC20: true,
   Synth: {
     // TODO! kev: change this to ProxyERC20sUSD ?
     target: 'ProxysUSD',
