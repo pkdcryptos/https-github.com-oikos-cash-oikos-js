@@ -2,6 +2,7 @@ import Depot from './Depot';
 import EscrowChecker from './EscrowChecker';
 import ExchangeRates from './ExchangeRates';
 import FeePool from './FeePool';
+import ProxyERC20 from './ProxyERC20';
 import Synth from './Synth';
 import Synthetix from './Synthetix';
 import SynthetixEscrow from './SynthetixEscrow';
@@ -48,6 +49,7 @@ export default {
   EscrowChecker,
   ExchangeRates,
   FeePool,
+  ProxyERC20,
   Synth,
   Synthetix,
   SynthetixEscrow,

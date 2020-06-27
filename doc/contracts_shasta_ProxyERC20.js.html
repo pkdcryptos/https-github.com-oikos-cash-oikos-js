@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>contracts/shasta/iLTC.js - Documentation</title>
+    <title>contracts/shasta/ProxyERC20.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">contracts/shasta/iLTC.js</h1>
+    <h1 class="page-title">contracts/shasta/ProxyERC20.js</h1>
     
 
     
@@ -43,15 +43,15 @@
         <article>
             <pre class="prettyprint source linenums"><code>import ContractSettings from '../../contractSettings';
 import tronContract from '../../tronContract';
-import abi from '../../../lib/abis/shasta/PurgeableSynth';
+import abi from '../../../lib/abis/shasta/ProxyERC20';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function iLTC(contractSettings) {
+function ProxyERC20(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
-  const address = this.contractSettings.addressList['ProxyiLTC'];
+  const address = this.contractSettings.addressList['ProxyERC20'];
   const tronWeb = this.contractSettings.tronWeb;
   this.signer = this.contractSettings.signer;
   this.contract = tronContract(abi, address, tronWeb, this.signer);
@@ -84,23 +84,6 @@ function iLTC(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _integrationProxy {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setIntegrationProxy = async (_integrationProxy, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setIntegrationProxy(_integrationProxy).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
    * @param _owner {String&lt;TrxAddress>}
    * @param txParams {TxParams}
   
@@ -120,33 +103,8 @@ function iLTC(contractSettings) {
    * Call (no gas consumed, doesn't require signer)
    * @returns BigNumber
    **/
-  this.initiationTime = async () => {
-    return await this.contract.initiationTime().call({ _isConstant: true });
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
   this.totalSupply = async () => {
     return await this.contract.totalSupply().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _beneficiary {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setSelfDestructBeneficiary = async (_beneficiary, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setSelfDestructBeneficiary(_beneficiary).send(txParams);
-    return { hash: txHash };
   };
 
   /**
@@ -177,52 +135,11 @@ function iLTC(contractSettings) {
   };
 
   /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-  this.terminateSelfDestruct = async txParams => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.terminateSelfDestruct().send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.exchangeRates = async () => {
-    return await this.contract.exchangeRates().call({ _isConstant: true });
-  };
-
-  /**
    * Call (no gas consumed, doesn't require signer)
    * @returns String&lt;TrxAddress>
    **/
   this.nominatedOwner = async () => {
     return await this.contract.nominatedOwner().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _exchangeRates {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setExchangeRates = async (_exchangeRates, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setExchangeRates(_exchangeRates).send(txParams);
-    return { hash: txHash };
   };
 
   /**
@@ -232,6 +149,23 @@ function iLTC(contractSettings) {
    **/
   this.balanceOf = async account => {
     return await this.contract.balanceOf(account).call({ _isConstant: true });
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _target {String&lt;TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+  this.setTarget = async (_target, txParams) => {
+    txParams = txParams || {};
+    txParams = {
+      // fee limit in SUN
+      feeLimit: 10000000,
+      ...txParams,
+    };
+    const txHash = await this.contract.setTarget(_target).send(txParams);
+    return { hash: txHash };
   };
 
   /**
@@ -252,32 +186,6 @@ function iLTC(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-  this.maxSupplyToPurgeInUSD = async () => {
-    return await this.contract.maxSupplyToPurgeInUSD().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param amount {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.issue = async (account, amount, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.issue(account, amount).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
    * @returns String&lt;TrxAddress>
    **/
   this.owner = async () => {
@@ -286,19 +194,34 @@ function iLTC(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-   * @param _synthetixProxy {String&lt;TrxAddress>}
+   * @param callData {bytes}
+   * @param numTopics {BigNumber}
+   * @param topic1 {bytes32}
+   * @param topic2 {bytes32}
+   * @param topic3 {bytes32}
+   * @param topic4 {bytes32}
    * @param txParams {TxParams}
   
    **/
-  this.setSynthetixProxy = async (_synthetixProxy, txParams) => {
+  this._emit = async (callData, numTopics, topic1, topic2, topic3, topic4, txParams) => {
     txParams = txParams || {};
     txParams = {
       // fee limit in SUN
       feeLimit: 10000000,
       ...txParams,
     };
-    const txHash = await this.contract.setSynthetixProxy(_synthetixProxy).send(txParams);
+    const txHash = await this.contract
+      ._emit(callData, numTopics, topic1, topic2, topic3, topic4)
+      .send(txParams);
     return { hash: txHash };
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns boolean
+   **/
+  this.useDELEGATECALL = async () => {
+    return await this.contract.useDELEGATECALL().call({ _isConstant: true });
   };
 
   /**
@@ -307,90 +230,6 @@ function iLTC(contractSettings) {
    **/
   this.symbol = async () => {
     return await this.contract.symbol().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _proxy {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setProxy = async (_proxy, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setProxy(_proxy).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-  this.selfDestruct = async txParams => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.selfDestruct().send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.integrationProxy = async () => {
-    return await this.contract.integrationProxy().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param account {String&lt;TrxAddress>}
-   * @param amount {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.burn = async (account, amount, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.burn(account, amount).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _tokenState {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setTokenState = async (_tokenState, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setTokenState(_tokenState).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-  this.SELFDESTRUCT_DELAY = async () => {
-    return await this.contract.SELFDESTRUCT_DELAY().call({ _isConstant: true });
   };
 
   /**
@@ -413,59 +252,18 @@ function iLTC(contractSettings) {
 
   /**
    * Transaction (consumes gas, requires signer)
-   * @param addresses {address[]}
+   * @param value {boolean}
    * @param txParams {TxParams}
   
    **/
-  this.purge = async (addresses, txParams) => {
+  this.setUseDELEGATECALL = async (value, txParams) => {
     txParams = txParams || {};
     txParams = {
       // fee limit in SUN
       feeLimit: 10000000,
       ...txParams,
     };
-    const txHash = await this.contract.purge(addresses).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns boolean
-   **/
-  this.selfDestructInitiated = async () => {
-    return await this.contract.selfDestructInitiated().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param sender {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setMessageSender = async (sender, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setMessageSender(sender).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param txParams {TxParams}
-  
-   **/
-  this.initiateSelfDestruct = async txParams => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.initiateSelfDestruct().send(txParams);
+    const txHash = await this.contract.setUseDELEGATECALL(value).send(txParams);
     return { hash: txHash };
   };
 
@@ -473,57 +271,8 @@ function iLTC(contractSettings) {
    * Call (no gas consumed, doesn't require signer)
    * @returns String&lt;TrxAddress>
    **/
-  this.synthetixProxy = async () => {
-    return await this.contract.synthetixProxy().call({ _isConstant: true });
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.selfDestructBeneficiary = async () => {
-    return await this.contract.selfDestructBeneficiary().call({ _isConstant: true });
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.feePoolProxy = async () => {
-    return await this.contract.feePoolProxy().call({ _isConstant: true });
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.messageSender = async () => {
-    return await this.contract.messageSender().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param _feePoolProxy {String&lt;TrxAddress>}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setFeePoolProxy = async (_feePoolProxy, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setFeePoolProxy(_feePoolProxy).send(txParams);
-    return { hash: txHash };
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns bytes32
-   **/
-  this.currencyKey = async () => {
-    return await this.contract.currencyKey().call({ _isConstant: true });
+  this.target = async () => {
+    return await this.contract.target().call({ _isConstant: true });
   };
 
   /**
@@ -535,42 +284,9 @@ function iLTC(contractSettings) {
   this.allowance = async (owner, spender) => {
     return await this.contract.allowance(owner, spender).call({ _isConstant: true });
   };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.tokenState = async () => {
-    return await this.contract.tokenState().call({ _isConstant: true });
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns String&lt;TrxAddress>
-   **/
-  this.proxy = async () => {
-    return await this.contract.proxy().call({ _isConstant: true });
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param amount {BigNumber}
-   * @param txParams {TxParams}
-  
-   **/
-  this.setTotalSupply = async (amount, txParams) => {
-    txParams = txParams || {};
-    txParams = {
-      // fee limit in SUN
-      feeLimit: 10000000,
-      ...txParams,
-    };
-    const txHash = await this.contract.setTotalSupply(amount).send(txParams);
-    return { hash: txHash };
-  };
 }
 
-export default iLTC;
+export default ProxyERC20;
 </code></pre>
         </article>
     </section>
