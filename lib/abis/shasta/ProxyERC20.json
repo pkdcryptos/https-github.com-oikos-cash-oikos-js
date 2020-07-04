@@ -325,8 +325,7 @@
 	{
 		"payable": true,
 		"stateMutability": "payable",
-		"type": "fallback",
-		"name": "fallback"
+		"type": "fallback"
 	},
 	{
 		"anonymous": false,
