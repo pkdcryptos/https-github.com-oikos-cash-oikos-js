@@ -18,6 +18,8 @@
     "format": "prettier --write '{tools,lib,src,__tests__}/**/*.js'",
     "abitojs": "node ./tools/abitojs.js",
     "webpack": "webpack --mode=production",
+    "rates": "babel-node src/examples/rates.js",
+    "rates:shasta": "TRON_NETWORK=shasta npm run rates",
     "build": "npm run clear && npm run abitojs && npm run format && npm run docs && npm run webpack"
   },
   "author": "Oikos",
