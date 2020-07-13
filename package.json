@@ -1,6 +1,6 @@
 {
   "name": "@oikos/oikos-js",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Oikos JS Library - access Oikos smart contracts from browser and Node.js",
   "main": "dist/main.node.js",
   "browser": "dist/main.js",
