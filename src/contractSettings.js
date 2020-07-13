@@ -5,7 +5,7 @@ import TronWeb from 'tronweb';
 import TronProvider from '../lib/TronProvider';
 
 const network2providerUrl = {
-  mainnet: 'http://185.180.223.157:8090',
+  mainnet: 'https://api.trongrid.io',
   shasta: 'https://api.shasta.trongrid.io',
 };
 
