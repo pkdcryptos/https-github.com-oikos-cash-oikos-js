@@ -16078,7 +16078,7 @@ exports.Base58 = Base58;
 /* 114 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"elliptic@6.3.3\",\"/Users/olalonde/code/kev/oikos-synthetix/synthetix-js\"]],\"_from\":\"elliptic@6.3.3\",\"_id\":\"elliptic@6.3.3\",\"_inBundle\":false,\"_integrity\":\"sha1-VILZZG1UvLif19mU/J4ulWiHbj8=\",\"_location\":\"/ethers/elliptic\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"elliptic@6.3.3\",\"name\":\"elliptic\",\"escapedName\":\"elliptic\",\"rawSpec\":\"6.3.3\",\"saveSpec\":null,\"fetchSpec\":\"6.3.3\"},\"_requiredBy\":[\"/ethers\"],\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.3.3.tgz\",\"_spec\":\"6.3.3\",\"_where\":\"/Users/olalonde/code/kev/oikos-synthetix/synthetix-js\",\"author\":{\"name\":\"Fedor Indutny\",\"email\":\"fedor@indutny.com\"},\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"inherits\":\"^2.0.1\"},\"description\":\"EC cryptography\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^2.11.3\",\"grunt\":\"^0.4.5\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^8.6.2\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^2.9.0\",\"jshint\":\"^2.6.0\",\"mocha\":\"^2.1.0\"},\"files\":[\"lib\"],\"homepage\":\"https://github.com/indutny/elliptic\",\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"license\":\"MIT\",\"main\":\"lib/elliptic.js\",\"name\":\"elliptic\",\"repository\":{\"type\":\"git\",\"url\":\"git+ssh://git@github.com/indutny/elliptic.git\"},\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"test\":\"npm run lint && npm run unit\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"version\":\"grunt dist && git add dist/\"},\"version\":\"6.3.3\"}");
+module.exports = JSON.parse("{\"name\":\"elliptic\",\"version\":\"6.3.3\",\"description\":\"EC cryptography\",\"main\":\"lib/elliptic.js\",\"files\":[\"lib\"],\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"test\":\"npm run lint && npm run unit\",\"version\":\"grunt dist && git add dist/\"},\"repository\":{\"type\":\"git\",\"url\":\"git@github.com:indutny/elliptic\"},\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"author\":\"Fedor Indutny <fedor@indutny.com>\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"homepage\":\"https://github.com/indutny/elliptic\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^2.11.3\",\"grunt\":\"^0.4.5\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^8.6.2\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^2.9.0\",\"jshint\":\"^2.6.0\",\"mocha\":\"^2.1.0\"},\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"inherits\":\"^2.0.1\"},\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.3.3.tgz\",\"_integrity\":\"sha1-VILZZG1UvLif19mU/J4ulWiHbj8=\",\"_from\":\"elliptic@6.3.3\"}");
 
 /***/ }),
 /* 115 */
@@ -30002,7 +30002,7 @@ elliptic.eddsa = __webpack_require__(190);
 /* 175 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"elliptic@6.5.2\",\"/Users/olalonde/code/kev/oikos-synthetix/synthetix-js\"]],\"_from\":\"elliptic@6.5.2\",\"_id\":\"elliptic@6.5.2\",\"_inBundle\":false,\"_integrity\":\"sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==\",\"_location\":\"/elliptic\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"elliptic@6.5.2\",\"name\":\"elliptic\",\"escapedName\":\"elliptic\",\"rawSpec\":\"6.5.2\",\"saveSpec\":null,\"fetchSpec\":\"6.5.2\"},\"_requiredBy\":[\"/browserify-sign\",\"/chainlink/ethers\",\"/create-ecdh\",\"/eth-lib\",\"/ethpm-registry/eth-lib\",\"/secp256k1\",\"/tronweb\",\"/truffle-contract/eth-lib\",\"/truffle-interface-adapter/ethers\",\"/web3-core-helpers/eth-lib\",\"/web3-core-method/eth-lib\",\"/web3-core/eth-lib\",\"/web3-eth-accounts/eth-lib\",\"/web3-eth-contract/eth-lib\",\"/web3-eth-ens/eth-lib\",\"/web3-eth-iban/eth-lib\",\"/web3-eth-personal/eth-lib\",\"/web3-eth/eth-lib\",\"/web3-net/eth-lib\",\"/web3-utils/eth-lib\",\"/web3/eth-lib\"],\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz\",\"_spec\":\"6.5.2\",\"_where\":\"/Users/olalonde/code/kev/oikos-synthetix/synthetix-js\",\"author\":{\"name\":\"Fedor Indutny\",\"email\":\"fedor@indutny.com\"},\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"hmac-drbg\":\"^1.0.0\",\"inherits\":\"^2.0.1\",\"minimalistic-assert\":\"^1.0.0\",\"minimalistic-crypto-utils\":\"^1.0.0\"},\"description\":\"EC cryptography\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^3.0.8\",\"grunt\":\"^1.0.4\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^9.0.1\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^3.0.7\",\"jshint\":\"^2.10.3\",\"mocha\":\"^6.2.2\"},\"files\":[\"lib\"],\"homepage\":\"https://github.com/indutny/elliptic\",\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"license\":\"MIT\",\"main\":\"lib/elliptic.js\",\"name\":\"elliptic\",\"repository\":{\"type\":\"git\",\"url\":\"git+ssh://git@github.com/indutny/elliptic.git\"},\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"test\":\"npm run lint && npm run unit\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"version\":\"grunt dist && git add dist/\"},\"version\":\"6.5.2\"}");
+module.exports = JSON.parse("{\"name\":\"elliptic\",\"version\":\"6.5.2\",\"description\":\"EC cryptography\",\"main\":\"lib/elliptic.js\",\"files\":[\"lib\"],\"scripts\":{\"jscs\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"jshint\":\"jscs benchmarks/*.js lib/*.js lib/**/*.js lib/**/**/*.js test/index.js\",\"lint\":\"npm run jscs && npm run jshint\",\"unit\":\"istanbul test _mocha --reporter=spec test/index.js\",\"test\":\"npm run lint && npm run unit\",\"version\":\"grunt dist && git add dist/\"},\"repository\":{\"type\":\"git\",\"url\":\"git@github.com:indutny/elliptic\"},\"keywords\":[\"EC\",\"Elliptic\",\"curve\",\"Cryptography\"],\"author\":\"Fedor Indutny <fedor@indutny.com>\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/indutny/elliptic/issues\"},\"homepage\":\"https://github.com/indutny/elliptic\",\"devDependencies\":{\"brfs\":\"^1.4.3\",\"coveralls\":\"^3.0.8\",\"grunt\":\"^1.0.4\",\"grunt-browserify\":\"^5.0.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-connect\":\"^1.0.0\",\"grunt-contrib-copy\":\"^1.0.0\",\"grunt-contrib-uglify\":\"^1.0.1\",\"grunt-mocha-istanbul\":\"^3.0.1\",\"grunt-saucelabs\":\"^9.0.1\",\"istanbul\":\"^0.4.2\",\"jscs\":\"^3.0.7\",\"jshint\":\"^2.10.3\",\"mocha\":\"^6.2.2\"},\"dependencies\":{\"bn.js\":\"^4.4.0\",\"brorand\":\"^1.0.1\",\"hash.js\":\"^1.0.0\",\"hmac-drbg\":\"^1.0.0\",\"inherits\":\"^2.0.1\",\"minimalistic-assert\":\"^1.0.0\",\"minimalistic-crypto-utils\":\"^1.0.0\"},\"_resolved\":\"https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz\",\"_integrity\":\"sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==\",\"_from\":\"elliptic@6.5.2\"}");
 
 /***/ }),
 /* 176 */
@@ -35494,7 +35494,7 @@ module.exports = require("zlib");
 /* 218 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_args\":[[\"axios@0.19.2\",\"/Users/olalonde/code/kev/oikos-synthetix/synthetix-js\"]],\"_from\":\"axios@0.19.2\",\"_id\":\"axios@0.19.2\",\"_inBundle\":false,\"_integrity\":\"sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==\",\"_location\":\"/tronweb/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.19.2\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.19.2\",\"saveSpec\":null,\"fetchSpec\":\"0.19.2\"},\"_requiredBy\":[\"/tronweb\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.19.2.tgz\",\"_spec\":\"0.19.2\",\"_where\":\"/Users/olalonde/code/kev/oikos-synthetix/synthetix-js\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"1.5.10\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"bundlesize\":\"^0.17.0\",\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.0.2\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^20.1.0\",\"grunt-karma\":\"^2.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^1.0.18\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^1.3.0\",\"karma-chrome-launcher\":\"^2.2.0\",\"karma-coverage\":\"^1.1.1\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-opera-launcher\":\"^1.0.0\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^1.2.0\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^1.7.0\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^5.2.0\",\"sinon\":\"^4.5.0\",\"typescript\":\"^2.8.1\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^1.13.1\",\"webpack-dev-server\":\"^1.14.1\"},\"homepage\":\"https://github.com/axios/axios\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test && bundlesize\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"version\":\"0.19.2\"}");
+module.exports = JSON.parse("{\"name\":\"axios\",\"version\":\"0.19.2\",\"description\":\"Promise based HTTP client for the browser and node.js\",\"main\":\"index.js\",\"scripts\":{\"test\":\"grunt test && bundlesize\",\"start\":\"node ./sandbox/server.js\",\"build\":\"NODE_ENV=production grunt build\",\"preversion\":\"npm test\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\",\"postversion\":\"git push && git push --tags\",\"examples\":\"node ./examples/server.js\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"fix\":\"eslint --fix lib/**/*.js\"},\"repository\":{\"type\":\"git\",\"url\":\"https://github.com/axios/axios.git\"},\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"author\":\"Matt Zabriskie\",\"license\":\"MIT\",\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"homepage\":\"https://github.com/axios/axios\",\"devDependencies\":{\"bundlesize\":\"^0.17.0\",\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.0.2\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^20.1.0\",\"grunt-karma\":\"^2.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^1.0.18\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^1.3.0\",\"karma-chrome-launcher\":\"^2.2.0\",\"karma-coverage\":\"^1.1.1\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-opera-launcher\":\"^1.0.0\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^1.2.0\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^1.7.0\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^5.2.0\",\"sinon\":\"^4.5.0\",\"typescript\":\"^2.8.1\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^1.13.1\",\"webpack-dev-server\":\"^1.14.1\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"typings\":\"./index.d.ts\",\"dependencies\":{\"follow-redirects\":\"1.5.10\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.19.2.tgz\",\"_integrity\":\"sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==\",\"_from\":\"axios@0.19.2\"}");
 
 /***/ }),
 /* 219 */
@@ -39125,65 +39125,131 @@ var MAINNET_ADDRESSES = {
   SynthiETH: '4108bfb3ae01fa6ba93514ccdb66daaab16e7cb952',
   Depot: '41859dc873b1568e04f93a6be623edc16cf70ced6e',
   ArbRewarder: '41de19475ec96fe20785edf6789e8e518cba2a067e',
-  DappMaintenance: '4111f52e05c7cc79199ab104b084c7997308e09c72'
+  DappMaintenance: '4111f52e05c7cc79199ab104b084c7997308e09c72',
+  TokenStatesLINK: '4106d2388f5e676b5aa07e6cd75ea7a060ad1f86bd',
+  ProxysLINK: '41d30302da9bef8dfb251ff87977d578db2c4e9e64',
+  SynthsLINK: '4183df1cb6a4231082c77dda12e672b3e83e75210f'
 };
 var SHASTA_ADDRESSES = {
-  SafeDecimalMath: '41ee6fa20f26a2ac860408159c33bd4ee896a387a0',
-  ExchangeRates: '4175f701c43172053130582da82819e8320c7f1377',
-  RewardEscrow: '41a65ae14dddd68626e91d9205df6866a1ef581863',
-  SynthetixEscrow: '41fcdbee8ee585a6ccffa7e63a32fa6e395b8fda58',
-  SynthetixState: '4129a77621b531276f145eab630aa6396231375b65',
-  ProxyFeePool: '41e17940732497d6d6dc04d5354246f24f251dfeb1',
-  DelegateApprovals: '41ca84fc99c52093d10655843ea6a51a1432c0cb8e',
-  FeePoolEternalStorage: '41be0aeebec8a9d2dee7ff1a0b397670aaac5839f2',
-  FeePool: '415ba46464f27b4a8464d09a70c5b771d2343c952e',
-  FeePoolState: '4149a8a98c6234a58f19d5223d8319c34266e8e4d8',
-  RewardsDistribution: '41dd3287f98df9c94670cf0830186cde5fe6a42ea9',
-  SupplySchedule: '41d82f9447c2d54902d359d02c76f55f2f9ce67a0f',
-  ProxySynthetix: '417849dd1f0744ce432d2659b15492d88822429343',
-  TokenStateSynthetix: '41a862b21a2f9d7d479a897b83a1a0a4256b5f27e2',
-  Synthetix: '41343960a5f9cb20384209a26270af864dc97f3a86',
-  EscrowChecker: '41595c401594ca75e9ddfb5fa8e2362c681132352f',
-  ProxyERC20: '4147f8b2f39947cec7714dbd259f2d996c475b9d21',
-  TokenStateODR: '4148b24fcc9590e658e550b5c11759244ea700041f',
-  ProxyODR: '41a46d39b1c4cbbabce81eb53d6a973c68576205ae',
-  SynthODR: '41d0259d7cbc6cefd7495a2cde855ef035f19ef252',
-  TokenStatesEUR: '4127cb7274abb36fd60636025422c55c44371ad144',
-  ProxysEUR: '41e94a88e29e2e6090e03b7316d9e60bcf89b9fdf4',
-  SynthsEUR: '415a601749a5e471bbfb084e9f97b6d4e4fd02f41c',
-  TokenStatesUSD: '4106323c9dceda6f054711bb0fd9e8cf310a95bda4',
-  ProxysUSD: '41b9b90a644272f4f5761a8bbad4521b57f306bfef',
-  SynthsUSD: '4167956347a6c7edd8d4b16619704d37dd79d5fd98',
-  TokenStatesAUD: '412f4ea76dab30bed77cd1c56e3be06805695ed8e0',
-  ProxysAUD: '416f7197da804ebc063da026f5f76daa74e5b50fd1',
-  SynthsAUD: '41f2f444f641b15d3658f9139b97ea86258394439a',
-  TokenStatesGBP: '41a8270d2227c101e729fdb9a3a5d8f24552530217',
-  ProxysGBP: '41531fc6a0093f79abfae0d4b6d668dda4e4744387',
-  SynthsGBP: '41447ab15ad4b4e9312694c7e2f974f7c8d98748a0',
-  TokenStatesCHF: '418313c34925254f2a74e292fee53b8d5645112167',
-  ProxysCHF: '4158a764b2ddb89819332bdc32783b383a749bc4f4',
-  SynthsCHF: '417c1b9df6f9dc8f47c94fc6d86d9587bcaae554c9',
-  TokenStatesBTC: '4188300407fc01799a97cd72fc0cc1a0511b782f11',
-  ProxysBTC: '419fcb2544b2d0c1a2da3321841c71d6b4fce0d639',
-  SynthsBTC: '41ebb19e1470b5010fbf464e1e7622111dcc912923',
-  TokenStatesETH: '4144df9b8507de382c2de03fa7decdea0a7c742cf4',
-  ProxysETH: '418655cadaf41a9249518d097eadfda68d36c6505f',
-  SynthsETH: '413342528636354e779cc71dfa36c73fbe13a852f8',
-  TokenStatesTRX: '413b1a52320842194b1b5c9e5a25111a2eafc8256e',
-  ProxysTRX: '41a538ed7020934bcd2bd697307e7d1f0b13e687bf',
-  SynthsTRX: '41da24ecf5ab26fda03cd8ecc0ce439608be6692e4',
-  TokenStateiBTC: '411b29cc1bddfcf877a1528cb0c09f9f351a26961c',
-  ProxyiBTC: '4117d772df1d74c996334644b29446f1f05c51493a',
-  SynthiBTC: '418539741f4fffe6f61749470d79bd54a5ebb40c11',
-  TokenStateiTRX: '41c4091cbbb866cd12a09435420b29486a52d717a8',
-  ProxyiTRX: '4184b8316d53dfbe067d91b0594fefdab16f571967',
-  SynthiTRX: '41d150ab7c9e25bd0e4cde9ce2d53f587e16244115',
-  TokenStateiETH: '413bd87f3cdddcf286a1445d9f595aada6e75cd104',
-  ProxyiETH: '41c65f8c5f3d52c1b7d24d5f6b16613779a60fe812',
-  SynthiETH: '41a27bcf0e780f035c6343aefcf6353403c783ae88',
-  Depot: '412d0b89edf0a8c70fb3b3f30d8db3b5352419c23b',
-  ArbRewarder: '415a02069cf53a3bc995a6e22904cf50cb3d39f9ad',
-  DappMaintenance: '418ff0188996bbab8e06ff3d69506685b33fdf1ae2'
+  SafeDecimalMath: '418515eedd5616ea8bf56c2318c5a48f8ea203edc2',
+  ExchangeRates: '4140cb1439d43b1d4213b32febfd1007796bc2117e',
+  RewardEscrow: '4152849256f6bb07a2852d108d526c34060ad96b8b',
+  SynthetixEscrow: '4155bdf85d3afe325ee4b0189e9f1e257fac2629a8',
+  SynthetixState: '412f32484d1dd9941523698ef2f94474af3812d661',
+  ProxyFeePool: '41e1000f4a2b3247d6dabd9a17a0076f7ef247bafd',
+  DelegateApprovals: '41e31715368412b9f79c1ec2af1422f34837a4eaac',
+  FeePoolEternalStorage: '41417390060bda4dfcda7eb522ae096ca6d31b2371',
+  FeePool: '4164152894c080d2de0e2f6277b6f46bbc66d67412',
+  FeePoolState: '417c162658b1a2d758d402be40e771c206d6708a15',
+  RewardsDistribution: '41939440369e566e8ea1621e2ca9811d3e4150cfbc',
+  SupplySchedule: '41a82abd548ec51ad66029b2aa238177ac91df2539',
+  ProxySynthetix: '41f744f277a587e457a3dc47505de9f61003e066e2',
+  TokenStateSynthetix: '41a5fd0bdccc2a3716c4aca98b8a73c4e053f81a5b',
+  Synthetix: '41e25b83f94ac376e695cc438b1ebfd06f23d09c7a',
+  EscrowChecker: '416171c2f20df63deb142340a362e9ce042952c754',
+  ProxyERC20: '4134a9683f19e82c5f287a2b455f12b7f2c68ae42e',
+  TokenStateODR: '41b4ad3d01a11d0e3904fcdf605597a35e19d17809',
+  ProxyODR: '4167ba68aaeeb5cb1f1f12c1142ce76266955a30cf',
+  SynthODR: '41a3dcffd79c1ffe22695f1d2141a8975359f03a57',
+  TokenStatesEUR: '41e9212890b4464724ce6adbfef480d8e91fc638cf',
+  ProxysEUR: '41cb2f0981b13dafb53a5d12dc7f370b9e89c3b0d8',
+  SynthsEUR: '414d491b2369b1518fbcecdefffdb388f1612e8f1a',
+  TokenStatesJPY: '4166764ae4b21fa6887e94b1f081178667f5731941',
+  ProxysJPY: '41b1bd83fa043a13d9c8392bfd8fcd8ba8a1939065',
+  SynthsJPY: '411c3fc64d6afc288b9964c9007f2f5ea3a10ce7ec',
+  TokenStatesUSD: '41c042c45d2a02a92235e782dd7b0a256a660f7912',
+  ProxysUSD: '41b5d7aced7d45d849abd242aa236392182e181add',
+  SynthsUSD: '41c2078186ea6ae3bc3792e99c790923b246510be2',
+  TokenStatesAUD: '41f8889db1f2eb1f7c79112d9488d6f45dd28af925',
+  ProxysAUD: '41805cf47e1b81e01ef98c14474fefbe9fec581583',
+  SynthsAUD: '418571f92672878190b26c5106f4e66542d7f4083a',
+  TokenStatesGBP: '41b09d32f02da06e851e3f130f5530bfeb73eb1772',
+  ProxysGBP: '41f79eee660dc612a969fa1508fcdecc8d4548f40f',
+  SynthsGBP: '41ed492fc1dbc617d982053f2b5967a6f0bb8998a3',
+  TokenStatesCHF: '41af63732dfa3a731f3a969f7f5901011bb5f49c84',
+  ProxysCHF: '416b7b362cc9515dbb0424d4dd428cec452a98d2a9',
+  SynthsCHF: '414d3cd93f3a58746709ba6a65ce7441e28fa8d39e',
+  TokenStatesXAU: '41184228bf42e7d0ad0c6b1b5099985eec1af72a29',
+  ProxysXAU: '41f9b79f669510a41232323d18f97f31fe16b4d85f',
+  SynthsXAU: '41b294beb2078be5f7a978ae1e5c45a958c4ebbfb1',
+  TokenStatesXAG: '41ac514f162631b7781db3d917d7ff42595ace0403',
+  ProxysXAG: '41ac279acf2a4bf6cc0679932e3b4934daeb5395ad',
+  SynthsXAG: '41f3700b2084c709b2f87917086c07d571007e18ec',
+  TokenStatesBTC: '41fad929a49a6567c9042e8dd103a85d169e666093',
+  ProxysBTC: '411ea8adca8ef5708ec1b518f22e68b4f227088efb',
+  SynthsBTC: '4146f3d6b4f4c91bdd7959fd3061fa3dcc6d709e4f',
+  TokenStatesETH: '4191a86fc15c77eba3b39c343aa7281f604484dde8',
+  ProxysETH: '415694e3a539c47cd324f788aa7f664619675b38d6',
+  SynthsETH: '416614dd00b81fe4ed0ac6547bcf7b70ebe71e4e99',
+  TokenStatesBTT: '41a0182ec714fd918013f1f791b25650af57c7cb88',
+  ProxysBTT: '41884161fc21078574850076ee1aad86b9c2184b71',
+  SynthsBTT: '416efb54d986a77aa594b638d14649083a71073130',
+  TokenStatesBNB: '415e9ee5dd295677c745d8e1e4dfe532f3c86b7ed7',
+  ProxysBNB: '41b318414b29641e7ea71ce7d91fcff375c7e1800f',
+  SynthsBNB: '412179fd2ff3a8e99f297aab387db5fc72773d182c',
+  TokenStatesMKR: '416b9e9cd20efaf627818c6b94a7cd57ebe602e075',
+  ProxysMKR: '413648247200c4b462cc96177c12e493536c52a30c',
+  SynthsMKR: '41fc0f1f0a2f0c0ffd9764445431660a654c260203',
+  TokenStatesTRX: '41cf5726c0e902aeacd4de160add3d7186871e50d5',
+  ProxysTRX: '4188567f1b64c541eecba63a2eb7a850d329210086',
+  SynthsTRX: '418d17b061d06fb03c236b59db761b6c220bb0d06b',
+  TokenStatesXTZ: '41db088924e83467cb9bbddda94cc7b868b764e51d',
+  ProxysXTZ: '41d5c9691b41ba986e7ca62813877f0686bfe7fe29',
+  SynthsXTZ: '4185e1cb3ee5058b039011d95a29f1b2fc2f6dd259',
+  TokenStatesXRP: '41ff483c3b5ad91908a2f72549e09dbf94b8096d1e',
+  ProxysXRP: '41825d3c1bf759d7463d236c7dc8de2c28f33a95b5',
+  SynthsXRP: '4154c6917007babc663501eaf839be666ed1fe6cff',
+  TokenStatesLTC: '419e18211c2e026f14826392f5dce7db92890dcf3f',
+  ProxysLTC: '41a42a8b1dee7a337684815b4f460b2c6ef3e809e8',
+  SynthsLTC: '4183e8753ca6bd098997af9866ee5d0d190f397996',
+  TokenStatesLINK: '41e3e28ff1a9eb9e86f7713efac125bada1204625a',
+  ProxysLINK: '412dafacbf089ac351e2dcfb08e02127a94c278d48',
+  SynthsLINK: '411d86ad2342e4328838d84fd053936c3382657222',
+  TokenStatesCEX: '418cc3ee4cb0eef8ce68d40fbf143f4e75dcbbbad6',
+  ProxysCEX: '41c14fad141a84eb073d2c438640aab1fb8df996d3',
+  SynthsCEX: '41235ec7373fe840c894ddaa562a0b34649e40cf91',
+  TokenStatesDEFI: '41bd20ff46b0960fb9781a5593fcf8340d6d7a1910',
+  ProxysDEFI: '415063c2c20bd31c4c60b536e31497cf93ecfc9767',
+  SynthsDEFI: '4110a09ba88ba20f665d90ef2b38932ceaea81333e',
+  TokenStateiBTC: '41103fbf323a309bc9c307921480acd66d238e1784',
+  ProxyiBTC: '4181436a4e6e2f3cf169d42d86556d609ee362e92b',
+  SynthiBTC: '41eaa48a4c9c4ff810c166069c2f3f88e4d028e785',
+  TokenStateiTRX: '412906ee9c6d83c44da9db69a177fc5fe89cfa0ea8',
+  ProxyiTRX: '4122442f541546c33fbb762b89a4443d7cd4528238',
+  SynthiTRX: '41249681dc117bb4c2988e3d727d363ef3cc81276e',
+  TokenStateiETH: '411d5ded74ac773360d76cfe74100625fe37e58566',
+  ProxyiETH: '41dec162e253956a27a62568975f276e125f518e1c',
+  SynthiETH: '4118e5e71a0b2f66c7a350764a808ec3d22a0d4a12',
+  TokenStateiBTT: '41a1e49a5ad0fc4edfb6302483b819117c99ab78b3',
+  ProxyiBTT: '41f73edcb167b27d3ae861e68afa4bd986d2d61d72',
+  SynthiBTT: '41465c97785dfc12609936834be1097ad07b11cc53',
+  TokenStateiBNB: '415c06c1508ca84bcf0d9212c2c52532d5e9892f8f',
+  ProxyiBNB: '4135754b4e07f33621b8d7036b85e681321526362e',
+  SynthiBNB: '412c7cba5c263038f968352aae7f705ffbe35ecffc',
+  TokenStateiMKR: '41b897f7dd73735f1c444d381c774f13720ac45dfb',
+  ProxyiMKR: '419c6df55e231435cd15ac54f34586c68f7a39d629',
+  SynthiMKR: '41df8d94bc9df55ddb3f59fd5cad75baca6a0114d1',
+  TokenStateiXTZ: '41c2b6e1bab8719fb882b4a5d009bfea4630cf4b5f',
+  ProxyiXTZ: '417307cc55eccbeef0664b9ef1401038eda1341aa3',
+  SynthiXTZ: '4115477606050486862cd1ce7295fbf5a39ba5c07f',
+  TokenStateiXRP: '4127aeedd33fe87779376b9f63ec4b2e626d916e63',
+  ProxyiXRP: '4142ec497b5746ea678696d81a394011a3f9cbb5b1',
+  SynthiXRP: '41a530c8c3f83a9c171d796c3837f7bf910b3e28eb',
+  TokenStateiLINK: '4197a1d5496c1a1ffbd425204df0d6fd93a2e592a5',
+  ProxyiLINK: '41d29f5491a02f5dccc352e48af6644c106d5da70d',
+  SynthiLINK: '41923da063991fcf63226237a45a7950fa97cf9fa7',
+  TokenStateiLTC: '4108592c47b5d9b6defbe55ec5256c7f728ce12c5f',
+  ProxyiLTC: '41d8329adcbc58dafe57844bb138f4cf3290d98a89',
+  SynthiLTC: '413f925b36f2c815df6da5afd93e4bce4d26220cc5',
+  TokenStateiCEX: '411b72f0181c8dc0d523e56cd873bf8260c3e76f74',
+  ProxyiCEX: '41fc76fd6a976e8ba2a3d5f475cd075e57c18a59d6',
+  SynthiCEX: '411ddacfcc500b6518cca24322e58fc7c353a83396',
+  TokenStateiDEFI: '41b3e00a99f2c5399449906815176e36214724b1c5',
+  ProxyiDEFI: '418c552df76dffa79cfdfc70d4a45a14ff374512b1',
+  SynthiDEFI: '41ba4bf52eeac88e3dab3bd1bbd799a41e82f2101c',
+  Depot: '41e2b2440cbd2bcf996ab6d13149f6fe101fc40367',
+  ArbRewarder: '416e21024bb9ef9d99b38a5558027b4e339fcd3804',
+  DappMaintenance: '418a795001e610bca7bca2357c10b40a3d551d3b54'
 };
 /* harmony default export */ var lib_addresses = ({
   1: MAINNET_ADDRESSES,
@@ -39810,7 +39876,8 @@ var SHASTA_ADDRESSES = {
 }, {
   payable: true,
   stateMutability: 'payable',
-  type: 'fallback'
+  type: 'fallback',
+  name: 'fallback'
 }, {
   anonymous: false,
   inputs: [{
@@ -45350,8 +45417,885 @@ var SHASTA_ADDRESSES = {
   ArbRewarder: ArbRewarder
 });
 // CONCATENATED MODULE: ./lib/abis/shasta/Depot.js
-
-/* harmony default export */ var shasta_Depot = (mainnet_Depot);
+/* harmony default export */ var shasta_Depot = ([{
+  constant: false,
+  inputs: [],
+  name: 'exchangeEtherForSNX',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: true,
+  stateMutability: 'payable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'minimumDepositAmount',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'guaranteedRate',
+    type: 'uint256'
+  }],
+  name: 'exchangeEtherForSynthsAtRate',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: true,
+  stateMutability: 'payable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [{
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'synthsReceivedForEther',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'synth',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'synthAmount',
+    type: 'uint256'
+  }],
+  name: 'exchangeSynthsForSynthetix',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_owner',
+    type: 'address'
+  }],
+  name: 'nominateNewOwner',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_paused',
+    type: 'bool'
+  }],
+  name: 'setPaused',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'initiationTime',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'exchangeEtherForSynths',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: true,
+  stateMutability: 'payable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_beneficiary',
+    type: 'address'
+  }],
+  name: 'setSelfDestructBeneficiary',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'fundsWallet',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'priceStalePeriod',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_time',
+    type: 'uint256'
+  }],
+  name: 'setPriceStalePeriod',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'terminateSelfDestruct',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_synth',
+    type: 'address'
+  }],
+  name: 'setSynth',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'pricesAreStale',
+  outputs: [{
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'newEthPrice',
+    type: 'uint256'
+  }, {
+    name: 'newSynthetixPrice',
+    type: 'uint256'
+  }, {
+    name: 'timeSent',
+    type: 'uint256'
+  }],
+  name: 'updatePrices',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'lastPriceUpdateTime',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'totalSellableDeposits',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'snxProxy',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'nominatedOwner',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'synthAmount',
+    type: 'uint256'
+  }, {
+    name: 'guaranteedRate',
+    type: 'uint256'
+  }],
+  name: 'exchangeSynthsForSynthetixAtRate',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'paused',
+  outputs: [{
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_fundsWallet',
+    type: 'address'
+  }],
+  name: 'setFundsWallet',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'depositStartIndex',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'acceptOwnership',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_oracle',
+    type: 'address'
+  }],
+  name: 'setOracle',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'guaranteedEtherRate',
+    type: 'uint256'
+  }, {
+    name: 'guaranteedSynthetixRate',
+    type: 'uint256'
+  }],
+  name: 'exchangeEtherForSynthetixAtRate',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: true,
+  stateMutability: 'payable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'oracle',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'withdrawMyDepositedSynths',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'owner',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'lastPauseTime',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'selfDestruct',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [{
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'synthetixReceivedForSynths',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'SELFDESTRUCT_DELAY',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_amount',
+    type: 'uint256'
+  }],
+  name: 'setMinimumDepositAmount',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'feePool',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  name: 'deposits',
+  outputs: [{
+    name: 'user',
+    type: 'address'
+  }, {
+    name: 'amount',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'selfDestructInitiated',
+  outputs: [{
+    name: '',
+    type: 'bool'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'usdToEthPrice',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [],
+  name: 'initiateSelfDestruct',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'selfDestructBeneficiary',
+  outputs: [{
+    name: '',
+    type: 'address'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [{
+    name: '',
+    type: 'address'
+  }],
+  name: 'smallDeposits',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [{
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'synthetixReceivedForEther',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'depositSynths',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'withdrawSynthetix',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'usdToSnxPrice',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'ORACLE_FUTURE_LIMIT',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: true,
+  inputs: [],
+  name: 'depositEndIndex',
+  outputs: [{
+    name: '',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'view',
+  type: 'function'
+}, {
+  constant: false,
+  inputs: [{
+    name: '_snxProxy',
+    type: 'address'
+  }],
+  name: 'setSynthetix',
+  outputs: [],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'function'
+}, {
+  inputs: [{
+    name: '_owner',
+    type: 'address'
+  }, {
+    name: '_fundsWallet',
+    type: 'address'
+  }, {
+    name: '_snxProxy',
+    type: 'address'
+  }, {
+    name: '_synth',
+    type: 'address'
+  }, {
+    name: '_feePool',
+    type: 'address'
+  }, {
+    name: '_oracle',
+    type: 'address'
+  }, {
+    name: '_usdToEthPrice',
+    type: 'uint256'
+  }, {
+    name: '_usdToSnxPrice',
+    type: 'uint256'
+  }],
+  payable: false,
+  stateMutability: 'nonpayable',
+  type: 'constructor'
+}, {
+  payable: true,
+  stateMutability: 'payable',
+  type: 'fallback'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newFundsWallet',
+    type: 'address'
+  }],
+  name: 'FundsWalletUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newOracle',
+    type: 'address'
+  }],
+  name: 'OracleUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newSynthContract',
+    type: 'address'
+  }],
+  name: 'SynthUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newSNXProxy',
+    type: 'address'
+  }],
+  name: 'SynthetixUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'priceStalePeriod',
+    type: 'uint256'
+  }],
+  name: 'PriceStalePeriodUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newEthPrice',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    name: 'newSynthetixPrice',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    name: 'timeSent',
+    type: 'uint256'
+  }],
+  name: 'PricesUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'fromCurrency',
+    type: 'string'
+  }, {
+    indexed: false,
+    name: 'fromAmount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    name: 'toCurrency',
+    type: 'string'
+  }, {
+    indexed: false,
+    name: 'toAmount',
+    type: 'uint256'
+  }],
+  name: 'Exchange',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'user',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'SynthWithdrawal',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    name: 'user',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'amount',
+    type: 'uint256'
+  }, {
+    indexed: true,
+    name: 'depositIndex',
+    type: 'uint256'
+  }],
+  name: 'SynthDeposit',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    name: 'user',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'amount',
+    type: 'uint256'
+  }, {
+    indexed: true,
+    name: 'depositIndex',
+    type: 'uint256'
+  }],
+  name: 'SynthDepositRemoved',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'user',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'amount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    name: 'minimum',
+    type: 'uint256'
+  }],
+  name: 'SynthDepositNotAccepted',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'MinimumDepositAmountUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    name: 'receiver',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'amount',
+    type: 'uint256'
+  }],
+  name: 'NonPayableContract',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: true,
+    name: 'fromAddress',
+    type: 'address'
+  }, {
+    indexed: true,
+    name: 'toAddress',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'fromETHAmount',
+    type: 'uint256'
+  }, {
+    indexed: false,
+    name: 'toAmount',
+    type: 'uint256'
+  }, {
+    indexed: true,
+    name: 'depositIndex',
+    type: 'uint256'
+  }],
+  name: 'ClearedDeposit',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'isPaused',
+    type: 'bool'
+  }],
+  name: 'PauseChanged',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [],
+  name: 'SelfDestructTerminated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'beneficiary',
+    type: 'address'
+  }],
+  name: 'SelfDestructed',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'selfDestructDelay',
+    type: 'uint256'
+  }],
+  name: 'SelfDestructInitiated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newBeneficiary',
+    type: 'address'
+  }],
+  name: 'SelfDestructBeneficiaryUpdated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerNominated',
+  type: 'event'
+}, {
+  anonymous: false,
+  inputs: [{
+    indexed: false,
+    name: 'oldOwner',
+    type: 'address'
+  }, {
+    indexed: false,
+    name: 'newOwner',
+    type: 'address'
+  }],
+  name: 'OwnerChanged',
+  type: 'event'
+}]);
 // CONCATENATED MODULE: ./lib/abis/shasta/EscrowChecker.js
 
 /* harmony default export */ var shasta_EscrowChecker = (EscrowChecker);
@@ -45859,6 +46803,13 @@ var MAINNET_SYNTHS = [{
     upperLimit: 330,
     lowerLimit: 110
   }
+}, {
+  name: 'sLINK',
+  asset: 'LINK',
+  category: 'crypto',
+  sign: '',
+  desc: 'ChainLink token',
+  aggregator: ''
 }];
 var SHASTA_SYNTHS = [{
   name: 'ODR',
@@ -46092,13 +47043,6 @@ function (_Signer) {
 
   return TronWebSigner;
 }(ethers["Signer"]);
-/*
-  // https://developers.tron.network/docs/trongridjs
-import TronGrid from 'trongrid';
-
-const tronGrid = new TronGrid(tronWeb)
-*/
-
 
 var TronProvider_TronProvider =
 /*#__PURE__*/
@@ -46376,7 +47320,7 @@ function (_BaseProvider) {
 
 
 var network2providerUrl = {
-  mainnet: 'https://api.trongrid.io',
+  mainnet: 'https://api.tronstack.io',
   shasta: 'https://api.shasta.trongrid.io'
 }; // kev: for some reason tronWeb throws random errors when private key not set,
 // even when calling pure functions :/
@@ -78627,7 +79571,1416 @@ function iETH(contractSettings) {
 }
 
 /* harmony default export */ var mainnet_iETH = (iETH);
+// CONCATENATED MODULE: ./src/contracts/mainnet/sLINK.js
+
+
+
+
+function sLINK_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function sLINK_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { sLINK_ownKeys(Object(source), true).forEach(function (key) { defineProperty_default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { sLINK_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+/** @constructor
+ * @param contractSettings {ContractSettings}
+ */
+
+function sLINK(contractSettings) {
+  var _this = this;
+
+  this.contractSettings = contractSettings || new src_contractSettings();
+  var address = this.contractSettings.addressList['ProxysLINK'];
+  var tronWeb = this.contractSettings.tronWeb;
+  this.signer = this.contractSettings.signer;
+  this.contract = tronContract(mainnet_Synth, address, tronWeb, this.signer);
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String
+   **/
+
+  this.name =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee() {
+    return regenerator_default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return _this.contract.name().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context.abrupt("return", _context.sent);
+
+          case 3:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param spender {String<TrxAddress>}
+   * @param value {BigNumber}
+   * @param txParams {TxParams}
+   * @returns boolean
+   **/
+
+  this.approve =
+  /*#__PURE__*/
+  function () {
+    var _ref2 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee2(spender, value, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context2.next = 4;
+              return _this.contract.approve(spender, value).send(txParams);
+
+            case 4:
+              txHash = _context2.sent;
+              return _context2.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function (_x, _x2, _x3) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _integrationProxy {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.setIntegrationProxy =
+  /*#__PURE__*/
+  function () {
+    var _ref3 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee3(_integrationProxy, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context3.next = 4;
+              return _this.contract.setIntegrationProxy(_integrationProxy).send(txParams);
+
+            case 4:
+              txHash = _context3.sent;
+              return _context3.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      }, _callee3);
+    }));
+
+    return function (_x4, _x5) {
+      return _ref3.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _owner {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.nominateNewOwner =
+  /*#__PURE__*/
+  function () {
+    var _ref4 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee4(_owner, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context4.next = 4;
+              return _this.contract.nominateNewOwner(_owner).send(txParams);
+
+            case 4:
+              txHash = _context4.sent;
+              return _context4.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    }));
+
+    return function (_x6, _x7) {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+
+  this.initiationTime =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee5() {
+    return regenerator_default.a.wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            _context5.next = 2;
+            return _this.contract.initiationTime().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context5.abrupt("return", _context5.sent);
+
+          case 3:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+  this.totalSupply =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee6() {
+    return regenerator_default.a.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            _context6.next = 2;
+            return _this.contract.totalSupply().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context6.abrupt("return", _context6.sent);
+
+          case 3:
+          case "end":
+            return _context6.stop();
+        }
+      }
+    }, _callee6);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _beneficiary {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setSelfDestructBeneficiary =
+  /*#__PURE__*/
+  function () {
+    var _ref7 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee7(_beneficiary, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee7$(_context7) {
+        while (1) {
+          switch (_context7.prev = _context7.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context7.next = 4;
+              return _this.contract.setSelfDestructBeneficiary(_beneficiary).send(txParams);
+
+            case 4:
+              txHash = _context7.sent;
+              return _context7.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context7.stop();
+          }
+        }
+      }, _callee7);
+    }));
+
+    return function (_x8, _x9) {
+      return _ref7.apply(this, arguments);
+    };
+  }();
+  /**
+   * Override ERC20 transferFrom function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
+   * Transaction (consumes gas, requires signer)
+   * @param from {String<TrxAddress>}
+   * @param to {String<TrxAddress>}
+   * @param value {BigNumber}
+   * @param txParams {TxParams}
+   * @returns boolean
+   **/
+
+
+  this.transferFrom =
+  /*#__PURE__*/
+  function () {
+    var _ref8 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee8(from, to, value, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee8$(_context8) {
+        while (1) {
+          switch (_context8.prev = _context8.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context8.next = 4;
+              return _this.contract.transferFrom(from, to, value).send(txParams);
+
+            case 4:
+              txHash = _context8.sent;
+              return _context8.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context8.stop();
+          }
+        }
+      }, _callee8);
+    }));
+
+    return function (_x10, _x11, _x12, _x13) {
+      return _ref8.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns Number
+   **/
+
+
+  this.decimals =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee9() {
+    return regenerator_default.a.wrap(function _callee9$(_context9) {
+      while (1) {
+        switch (_context9.prev = _context9.next) {
+          case 0:
+            _context9.next = 2;
+            return _this.contract.decimals().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context9.abrupt("return", _context9.sent);
+
+          case 3:
+          case "end":
+            return _context9.stop();
+        }
+      }
+    }, _callee9);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.terminateSelfDestruct =
+  /*#__PURE__*/
+  function () {
+    var _ref10 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee10(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee10$(_context10) {
+        while (1) {
+          switch (_context10.prev = _context10.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context10.next = 4;
+              return _this.contract.terminateSelfDestruct().send(txParams);
+
+            case 4:
+              txHash = _context10.sent;
+              return _context10.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context10.stop();
+          }
+        }
+      }, _callee10);
+    }));
+
+    return function (_x14) {
+      return _ref10.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.nominatedOwner =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee11() {
+    return regenerator_default.a.wrap(function _callee11$(_context11) {
+      while (1) {
+        switch (_context11.prev = _context11.next) {
+          case 0:
+            _context11.next = 2;
+            return _this.contract.nominatedOwner().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context11.abrupt("return", _context11.sent);
+
+          case 3:
+          case "end":
+            return _context11.stop();
+        }
+      }
+    }, _callee11);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param account {String<TrxAddress>}
+   * @returns BigNumber
+   **/
+
+  this.balanceOf =
+  /*#__PURE__*/
+  function () {
+    var _ref12 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee12(account) {
+      return regenerator_default.a.wrap(function _callee12$(_context12) {
+        while (1) {
+          switch (_context12.prev = _context12.next) {
+            case 0:
+              _context12.next = 2;
+              return _this.contract.balanceOf(account).call({
+                _isConstant: true
+              });
+
+            case 2:
+              return _context12.abrupt("return", _context12.sent);
+
+            case 3:
+            case "end":
+              return _context12.stop();
+          }
+        }
+      }, _callee12);
+    }));
+
+    return function (_x15) {
+      return _ref12.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.acceptOwnership =
+  /*#__PURE__*/
+  function () {
+    var _ref13 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee13(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee13$(_context13) {
+        while (1) {
+          switch (_context13.prev = _context13.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context13.next = 4;
+              return _this.contract.acceptOwnership().send(txParams);
+
+            case 4:
+              txHash = _context13.sent;
+              return _context13.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context13.stop();
+          }
+        }
+      }, _callee13);
+    }));
+
+    return function (_x16) {
+      return _ref13.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<TrxAddress>}
+   * @param amount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.issue =
+  /*#__PURE__*/
+  function () {
+    var _ref14 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee14(account, amount, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee14$(_context14) {
+        while (1) {
+          switch (_context14.prev = _context14.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context14.next = 4;
+              return _this.contract.issue(account, amount).send(txParams);
+
+            case 4:
+              txHash = _context14.sent;
+              return _context14.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context14.stop();
+          }
+        }
+      }, _callee14);
+    }));
+
+    return function (_x17, _x18, _x19) {
+      return _ref14.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.owner =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee15() {
+    return regenerator_default.a.wrap(function _callee15$(_context15) {
+      while (1) {
+        switch (_context15.prev = _context15.next) {
+          case 0:
+            _context15.next = 2;
+            return _this.contract.owner().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context15.abrupt("return", _context15.sent);
+
+          case 3:
+          case "end":
+            return _context15.stop();
+        }
+      }
+    }, _callee15);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _synthetixProxy {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setSynthetixProxy =
+  /*#__PURE__*/
+  function () {
+    var _ref16 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee16(_synthetixProxy, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee16$(_context16) {
+        while (1) {
+          switch (_context16.prev = _context16.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context16.next = 4;
+              return _this.contract.setSynthetixProxy(_synthetixProxy).send(txParams);
+
+            case 4:
+              txHash = _context16.sent;
+              return _context16.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context16.stop();
+          }
+        }
+      }, _callee16);
+    }));
+
+    return function (_x20, _x21) {
+      return _ref16.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String
+   **/
+
+
+  this.symbol =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee17() {
+    return regenerator_default.a.wrap(function _callee17$(_context17) {
+      while (1) {
+        switch (_context17.prev = _context17.next) {
+          case 0:
+            _context17.next = 2;
+            return _this.contract.symbol().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context17.abrupt("return", _context17.sent);
+
+          case 3:
+          case "end":
+            return _context17.stop();
+        }
+      }
+    }, _callee17);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _proxy {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setProxy =
+  /*#__PURE__*/
+  function () {
+    var _ref18 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee18(_proxy, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee18$(_context18) {
+        while (1) {
+          switch (_context18.prev = _context18.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context18.next = 4;
+              return _this.contract.setProxy(_proxy).send(txParams);
+
+            case 4:
+              txHash = _context18.sent;
+              return _context18.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context18.stop();
+          }
+        }
+      }, _callee18);
+    }));
+
+    return function (_x22, _x23) {
+      return _ref18.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.selfDestruct =
+  /*#__PURE__*/
+  function () {
+    var _ref19 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee19(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee19$(_context19) {
+        while (1) {
+          switch (_context19.prev = _context19.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context19.next = 4;
+              return _this.contract.selfDestruct().send(txParams);
+
+            case 4:
+              txHash = _context19.sent;
+              return _context19.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context19.stop();
+          }
+        }
+      }, _callee19);
+    }));
+
+    return function (_x24) {
+      return _ref19.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.integrationProxy =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee20() {
+    return regenerator_default.a.wrap(function _callee20$(_context20) {
+      while (1) {
+        switch (_context20.prev = _context20.next) {
+          case 0:
+            _context20.next = 2;
+            return _this.contract.integrationProxy().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context20.abrupt("return", _context20.sent);
+
+          case 3:
+          case "end":
+            return _context20.stop();
+        }
+      }
+    }, _callee20);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param account {String<TrxAddress>}
+   * @param amount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.burn =
+  /*#__PURE__*/
+  function () {
+    var _ref21 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee21(account, amount, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee21$(_context21) {
+        while (1) {
+          switch (_context21.prev = _context21.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context21.next = 4;
+              return _this.contract.burn(account, amount).send(txParams);
+
+            case 4:
+              txHash = _context21.sent;
+              return _context21.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context21.stop();
+          }
+        }
+      }, _callee21);
+    }));
+
+    return function (_x25, _x26, _x27) {
+      return _ref21.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _tokenState {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.setTokenState =
+  /*#__PURE__*/
+  function () {
+    var _ref22 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee22(_tokenState, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee22$(_context22) {
+        while (1) {
+          switch (_context22.prev = _context22.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context22.next = 4;
+              return _this.contract.setTokenState(_tokenState).send(txParams);
+
+            case 4:
+              txHash = _context22.sent;
+              return _context22.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context22.stop();
+          }
+        }
+      }, _callee22);
+    }));
+
+    return function (_x28, _x29) {
+      return _ref22.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+
+
+  this.SELFDESTRUCT_DELAY =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee23() {
+    return regenerator_default.a.wrap(function _callee23$(_context23) {
+      while (1) {
+        switch (_context23.prev = _context23.next) {
+          case 0:
+            _context23.next = 2;
+            return _this.contract.SELFDESTRUCT_DELAY().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context23.abrupt("return", _context23.sent);
+
+          case 3:
+          case "end":
+            return _context23.stop();
+        }
+      }
+    }, _callee23);
+  }));
+  /**
+   * Override ERC20 transfer function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
+   * Transaction (consumes gas, requires signer)
+   * @param to {String<TrxAddress>}
+   * @param value {BigNumber}
+   * @param txParams {TxParams}
+   * @returns boolean
+   **/
+
+  this.transfer =
+  /*#__PURE__*/
+  function () {
+    var _ref24 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee24(to, value, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee24$(_context24) {
+        while (1) {
+          switch (_context24.prev = _context24.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context24.next = 4;
+              return _this.contract.transfer(to, value).send(txParams);
+
+            case 4:
+              txHash = _context24.sent;
+              return _context24.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context24.stop();
+          }
+        }
+      }, _callee24);
+    }));
+
+    return function (_x30, _x31, _x32) {
+      return _ref24.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns boolean
+   **/
+
+
+  this.selfDestructInitiated =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee25() {
+    return regenerator_default.a.wrap(function _callee25$(_context25) {
+      while (1) {
+        switch (_context25.prev = _context25.next) {
+          case 0:
+            _context25.next = 2;
+            return _this.contract.selfDestructInitiated().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context25.abrupt("return", _context25.sent);
+
+          case 3:
+          case "end":
+            return _context25.stop();
+        }
+      }
+    }, _callee25);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param sender {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setMessageSender =
+  /*#__PURE__*/
+  function () {
+    var _ref26 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee26(sender, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee26$(_context26) {
+        while (1) {
+          switch (_context26.prev = _context26.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context26.next = 4;
+              return _this.contract.setMessageSender(sender).send(txParams);
+
+            case 4:
+              txHash = _context26.sent;
+              return _context26.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context26.stop();
+          }
+        }
+      }, _callee26);
+    }));
+
+    return function (_x33, _x34) {
+      return _ref26.apply(this, arguments);
+    };
+  }();
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param txParams {TxParams}
+  
+   **/
+
+
+  this.initiateSelfDestruct =
+  /*#__PURE__*/
+  function () {
+    var _ref27 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee27(txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee27$(_context27) {
+        while (1) {
+          switch (_context27.prev = _context27.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context27.next = 4;
+              return _this.contract.initiateSelfDestruct().send(txParams);
+
+            case 4:
+              txHash = _context27.sent;
+              return _context27.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context27.stop();
+          }
+        }
+      }, _callee27);
+    }));
+
+    return function (_x35) {
+      return _ref27.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.synthetixProxy =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee28() {
+    return regenerator_default.a.wrap(function _callee28$(_context28) {
+      while (1) {
+        switch (_context28.prev = _context28.next) {
+          case 0:
+            _context28.next = 2;
+            return _this.contract.synthetixProxy().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context28.abrupt("return", _context28.sent);
+
+          case 3:
+          case "end":
+            return _context28.stop();
+        }
+      }
+    }, _callee28);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.selfDestructBeneficiary =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee29() {
+    return regenerator_default.a.wrap(function _callee29$(_context29) {
+      while (1) {
+        switch (_context29.prev = _context29.next) {
+          case 0:
+            _context29.next = 2;
+            return _this.contract.selfDestructBeneficiary().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context29.abrupt("return", _context29.sent);
+
+          case 3:
+          case "end":
+            return _context29.stop();
+        }
+      }
+    }, _callee29);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.feePoolProxy =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee30() {
+    return regenerator_default.a.wrap(function _callee30$(_context30) {
+      while (1) {
+        switch (_context30.prev = _context30.next) {
+          case 0:
+            _context30.next = 2;
+            return _this.contract.feePoolProxy().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context30.abrupt("return", _context30.sent);
+
+          case 3:
+          case "end":
+            return _context30.stop();
+        }
+      }
+    }, _callee30);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.messageSender =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee31() {
+    return regenerator_default.a.wrap(function _callee31$(_context31) {
+      while (1) {
+        switch (_context31.prev = _context31.next) {
+          case 0:
+            _context31.next = 2;
+            return _this.contract.messageSender().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context31.abrupt("return", _context31.sent);
+
+          case 3:
+          case "end":
+            return _context31.stop();
+        }
+      }
+    }, _callee31);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _feePoolProxy {String<TrxAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setFeePoolProxy =
+  /*#__PURE__*/
+  function () {
+    var _ref32 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee32(_feePoolProxy, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee32$(_context32) {
+        while (1) {
+          switch (_context32.prev = _context32.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context32.next = 4;
+              return _this.contract.setFeePoolProxy(_feePoolProxy).send(txParams);
+
+            case 4:
+              txHash = _context32.sent;
+              return _context32.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context32.stop();
+          }
+        }
+      }, _callee32);
+    }));
+
+    return function (_x36, _x37) {
+      return _ref32.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32
+   **/
+
+
+  this.currencyKey =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee33() {
+    return regenerator_default.a.wrap(function _callee33$(_context33) {
+      while (1) {
+        switch (_context33.prev = _context33.next) {
+          case 0:
+            _context33.next = 2;
+            return _this.contract.currencyKey().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context33.abrupt("return", _context33.sent);
+
+          case 3:
+          case "end":
+            return _context33.stop();
+        }
+      }
+    }, _callee33);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param owner {String<TrxAddress>}
+   * @param spender {String<TrxAddress>}
+   * @returns BigNumber
+   **/
+
+  this.allowance =
+  /*#__PURE__*/
+  function () {
+    var _ref34 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee34(owner, spender) {
+      return regenerator_default.a.wrap(function _callee34$(_context34) {
+        while (1) {
+          switch (_context34.prev = _context34.next) {
+            case 0:
+              _context34.next = 2;
+              return _this.contract.allowance(owner, spender).call({
+                _isConstant: true
+              });
+
+            case 2:
+              return _context34.abrupt("return", _context34.sent);
+
+            case 3:
+            case "end":
+              return _context34.stop();
+          }
+        }
+      }, _callee34);
+    }));
+
+    return function (_x38, _x39) {
+      return _ref34.apply(this, arguments);
+    };
+  }();
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+
+  this.tokenState =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee35() {
+    return regenerator_default.a.wrap(function _callee35$(_context35) {
+      while (1) {
+        switch (_context35.prev = _context35.next) {
+          case 0:
+            _context35.next = 2;
+            return _this.contract.tokenState().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context35.abrupt("return", _context35.sent);
+
+          case 3:
+          case "end":
+            return _context35.stop();
+        }
+      }
+    }, _callee35);
+  }));
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns String<TrxAddress>
+   **/
+
+  this.proxy =
+  /*#__PURE__*/
+  asyncToGenerator_default()(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee36() {
+    return regenerator_default.a.wrap(function _callee36$(_context36) {
+      while (1) {
+        switch (_context36.prev = _context36.next) {
+          case 0:
+            _context36.next = 2;
+            return _this.contract.proxy().call({
+              _isConstant: true
+            });
+
+          case 2:
+            return _context36.abrupt("return", _context36.sent);
+
+          case 3:
+          case "end":
+            return _context36.stop();
+        }
+      }
+    }, _callee36);
+  }));
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param amount {BigNumber}
+   * @param txParams {TxParams}
+  
+   **/
+
+  this.setTotalSupply =
+  /*#__PURE__*/
+  function () {
+    var _ref37 = asyncToGenerator_default()(
+    /*#__PURE__*/
+    regenerator_default.a.mark(function _callee37(amount, txParams) {
+      var txHash;
+      return regenerator_default.a.wrap(function _callee37$(_context37) {
+        while (1) {
+          switch (_context37.prev = _context37.next) {
+            case 0:
+              txParams = txParams || {};
+              txParams = sLINK_objectSpread({
+                // fee limit in SUN
+                feeLimit: 10000000
+              }, txParams);
+              _context37.next = 4;
+              return _this.contract.setTotalSupply(amount).send(txParams);
+
+            case 4:
+              txHash = _context37.sent;
+              return _context37.abrupt("return", {
+                hash: txHash
+              });
+
+            case 6:
+            case "end":
+              return _context37.stop();
+          }
+        }
+      }, _callee37);
+    }));
+
+    return function (_x40, _x41) {
+      return _ref37.apply(this, arguments);
+    };
+  }();
+}
+
+/* harmony default export */ var mainnet_sLINK = (sLINK);
 // CONCATENATED MODULE: ./src/contracts/mainnet/index.js
+
 
 
 
@@ -78676,7 +81029,8 @@ function iETH(contractSettings) {
   sTRX: mainnet_sTRX,
   iBTC: mainnet_iBTC,
   iTRX: mainnet_iTRX,
-  iETH: mainnet_iETH
+  iETH: mainnet_iETH,
+  sLINK: mainnet_sLINK
 });
 // CONCATENATED MODULE: ./src/contracts/shasta/Depot.js
 
